@@ -11,7 +11,7 @@ const TeslaModelContainer = () => {
                 <TeslaModel/>
             </Stage>
             <OrbitControls enableZoom={false} autoRotate/>
-            <PerspectiveCamera position={[0,-1,2]} zoom={0.5} makeDefault/>
+            <PerspectiveCamera position={[0,2,2]} zoom={0.5} makeDefault/>
         </Suspense>
     </Canvas>
   )

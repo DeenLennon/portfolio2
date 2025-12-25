@@ -1,0 +1,296 @@
+/* .portfolio{
+    height: 600vh;
+    position: relative;
+}
+
+.portfolio-list{
+    position: sticky;
+    top: 0;
+    display: flex;
+    height: 100vh;
+    width: max-content;
+}
+
+.portfolio-item{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.portfolio-item:nth-child(1){
+    background: linear-gradient(to right, #da5a10f3, #256169);
+}
+
+.portfolio-item:nth-child(2){
+    background: linear-gradient(to right, #256169, #da2403);
+}
+
+.portfolio-item:nth-child(3){
+    background: linear-gradient(to right, #da2403, #0c7074);
+}
+
+.portfolio-item:nth-child(4){
+    background: linear-gradient(to right, #0c7074, #2e2e3a);
+}
+
+.portfolio-item:nth-child(5){
+    background: linear-gradient(to right, #2e2e3a, #da5a10f3);
+}
+
+.progress-bar{
+    position: sticky;
+    width: 80px;
+    height: 80px;
+    left: 0;
+    bottom: 80%;
+}
+
+.pImg{
+    width: 40%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.pImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pText{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.pText h1{
+    font-size: 56px;
+    line-height: 1;
+}
+
+.pText p{
+    font-weight: 300;
+}
+
+.pText button{
+    background: #084047;
+    padding: 10px;
+    border: none;
+    font-weight: 500;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media (max-width: 1536px){
+    .portfolio-item{
+        gap: 15px;
+    }
+}
+
+@media (max-width: 1280px){
+    .pText h1{
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 1024px){
+    .portfolio-item{
+        flex-direction: column;
+    }
+
+    .pImg, .pText{
+        width: 80%;
+    }
+
+    .progress-bar{
+        bottom: 100px;
+        left: 100%;
+    }
+}
+
+@media (max-width: 768px){
+    .progress-bar{
+       width: 50px;
+       height: 50px;
+    }
+} */
+
+/* ===== Portfolio Wrapper ===== */
+.portfolio {
+  position: relative;
+  min-height: 600vh;
+}
+
+/* ===== Horizontal Scroll Track ===== */
+.portfolio-list {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+  will-change: transform;
+}
+
+/* ===== Portfolio Slide ===== */
+.portfolio-item {
+  min-width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  padding: 0 5vw;
+  box-sizing: border-box;
+}
+
+/* ===== Background Gradients ===== */
+.portfolio-item:nth-child(1) {
+  background: linear-gradient(90deg, #da5a10f3, #256169);
+}
+.portfolio-item:nth-child(2) {
+  background: linear-gradient(90deg, #256169, #da2403);
+}
+.portfolio-item:nth-child(3) {
+  background: linear-gradient(90deg, #da2403, #0c7074);
+}
+.portfolio-item:nth-child(4) {
+  background: linear-gradient(90deg, #0c7074, #2e2e3a);
+}
+.portfolio-item:nth-child(5) {
+  background: linear-gradient(90deg, #2e2e3a, #da5a10f3);
+}
+
+/* ===== Progress Indicator ===== */
+.progress-bar {
+  position: sticky;
+  left: 32px;
+  top: 20%;
+  width: 80px;
+  height: 80px;
+  z-index: 10;
+}
+
+/* ===== Image ===== */
+.pImg {
+  width: 40%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.pImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===== Text Content ===== */
+.pText {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pText h1 {
+  font-size: 56px;
+  line-height: 1.05;
+}
+
+.pText p {
+  font-weight: 300;
+  max-width: 48ch;
+}
+
+.pText button {
+  width: fit-content;
+  padding: 12px 18px;
+  background: #084047;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+@media (max-width: 1536px) {
+  .portfolio-item {
+    gap: 24px;
+  }
+
+  .pText h1 {
+    font-size: 52px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .pText h1 {
+    font-size: 46px;
+  }
+
+  .pImg,
+  .pText {
+    width: 45%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .portfolio-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .pImg,
+  .pText {
+    width: 80%;
+  }
+
+  .pText p {
+    max-width: none;
+  }
+
+  .progress-bar {
+    left: auto;
+    right: 24px;
+    top: auto;
+    bottom: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio {
+    min-height: 500vh;
+  }
+
+  .portfolio-item {
+    padding: 0 24px;
+  }
+
+  .pText h1 {
+    font-size: 32px;
+  }
+
+  .progress-bar {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-item {
+    gap: 16px;
+  }
+
+  .pText h1 {
+    font-size: 26px;
+  }
+
+  .pText button {
+    padding: 10px 14px;
+  }
+}

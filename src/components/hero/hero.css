@@ -191,7 +191,7 @@
     justify-content: center;
 }
 
-@media (max-width: 1536px){
+/* @media (max-width: 1536px){
     .hero-title{
         font-size: 72px;
     }
@@ -265,4 +265,145 @@
     .follow, .speech-bubble, .certificate{
         display: none;
     }
+} */
+
+@media (min-width: 1536px) {
+  .hero-title {
+    font-size: 80px;
+    line-height: 1.1;
+  }
+
+  .hero-image {
+    height: 85%;
+  }
+
+  .awards {
+    width: 30%;
+  }
+}
+
+@media (max-width: 1535px) and (min-width: 1280px) {
+  .hero-title {
+    font-size: 64px;
+  }
+
+  .hero-image {
+    height: 80%;
+  }
+
+  .awards {
+    width: 40%;
+  }
+}
+
+@media (max-width: 1279px) and (min-width: 1024px) {
+  .bg {
+    height: 60%;
+    bottom: 0;
+    top: auto;
+  }
+
+  .hero-title {
+    font-size: 48px;
+  }
+
+  .hero-image {
+    height: 75%;
+  }
+
+  .awards {
+    width: 55%;
+  }
+
+  .speech-bubble {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+  .hero {
+    min-height: 100vh;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-image {
+    height: 65%;
+  }
+
+  .awards {
+    width: 100%;
+  }
+
+  .speech-bubble {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .bg {
+    height: 55%;
+  }
+
+  .hero-section {
+    width: 100%;
+  }
+
+  .hero-section.left {
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .hero-title {
+    font-size: 28px;
+    line-height: 1.2;
+    margin-top: 24px;
+  }
+
+  .hero-image {
+    position: relative;
+    height: 50%;
+  }
+
+  .awards {
+    width: 100%;
+  }
+
+  .awards-list {
+    justify-content: center;
+  }
+
+  .hero-section.right {
+    justify-content: flex-end;
+  }
+
+  /* Progressive simplification */
+  .follow,
+  .speech-bubble,
+  .certificate {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 22px;
+  }
+
+  .hero-image {
+    height: 45%;
+  }
+
+  .scroll,
+  .contact-link {
+    margin-bottom: 24px;
+  }
 }

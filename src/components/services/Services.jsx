@@ -106,10 +106,10 @@ const Services = () => {
           <Counter from={0} to={72} text="Happy Clients" />
         </div>
       </div>
-      {/* <div className="services-section right">{
+      <div className="services-section right">{
         currentServiceId === 1 ? (<ComputerModelContainer/>) : currentServiceId === 2 ? (<TeslaModelContainer/>) : ""
         }
-      </div> */}
+      </div>
     </div>
   );
 };
