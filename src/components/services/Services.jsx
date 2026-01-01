@@ -75,7 +75,7 @@ const Services = () => {
           animate={isInView ? "animate" : undefined}
           className="section-title"
         >
-          How do I help?
+          You need a developer.
         </motion.h1>
         <motion.div
           ref={ref}
