@@ -1,4 +1,4 @@
-*{
+/* *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -37,7 +37,7 @@ section{
 @keyframes loading {
   0% { transform: translateX(-100%); }
   100% { transform: translateX(250%); }
-}
+} */
 
 /* @media (min-width: 640px){
   .container{
@@ -70,42 +70,440 @@ section{
 } */
 
 /* Small devices (≥ 640px) */
-@media (min-width: 640px) {
+/* @media (min-width: 640px) {
   .container {
     max-width: 640px;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
   }
-}
+} */
 
 /* Medium devices (≥ 768px) */
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .container {
     max-width: 768px;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
-}
+} */
 
 /* Large devices (≥ 1024px) */
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   .container {
     max-width: 1024px;
     padding-left: 2rem;
     padding-right: 2rem;
   }
-}
+} */
 
 /* Extra-large devices (≥ 1280px) */
-@media (min-width: 1280px) {
+/* @media (min-width: 1280px) {
   .container {
     max-width: 1280px;
   }
-}
+} */
 
 /* 2XL / Wide screens (≥ 1536px) */
+/* @media (min-width: 1536px) {
+  .container {
+    max-width: 1440px; Prevents over-stretching
+  }
+} */
+
+/* ============================================
+   GLOBAL RESET & BASE STYLES
+   ============================================ */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ============================================
+   ROOT CONFIGURATION
+   ============================================ */
+
+:root {
+  /* Color Variables */
+  --color-bg-primary: #12071f;
+  --color-bg-secondary: #2f204e;
+  --color-text-primary: #3671be;
+  
+  /* Spacing Variables */
+  --container-padding-mobile: 1rem;
+  --container-padding-tablet: 1.5rem;
+  --container-padding-desktop: 2rem;
+  
+  /* Container Max Widths */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1536px;
+}
+
+/* ============================================
+   HTML & BODY CONFIGURATION
+   ============================================ */
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: linear-gradient(
+    to bottom,
+    var(--color-bg-primary),
+    var(--color-bg-secondary)
+  );
+  color: var(--color-text-primary);
+  font-family: 'Calibri', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ============================================
+   TYPOGRAPHY & LINKS
+   ============================================ */
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-text-primary);
+  outline-offset: 2px;
+}
+
+/* ============================================
+   CONTAINER SYSTEM
+   ============================================ */
+
+.container {
+  width: 100%;
+  max-width: var(--container-2xl);
+  padding-left: var(--container-padding-mobile);
+  padding-right: var(--container-padding-mobile);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ============================================
+   SECTION CONFIGURATION (FULL VIEWPORT)
+   ============================================ */
+
+section {
+  /* Full viewport height on all devices */
+  min-height: 100vh;
+  min-height: 100dvh; /* Dynamic viewport height for mobile browsers */
+  
+  /* Scroll snap alignment */
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  
+  /* Flexbox for content centering */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  /* Additional spacing */
+  position: relative;
+  width: 100%;
+  max-width: var(--container-2xl);
+  /* overflow: hidden; */
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes loading {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(250%);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+/* Small devices (≥ 640px) */
+@media (min-width: 640px) {
+  .container {
+    max-width: var(--container-sm);
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+/* Medium devices (≥ 768px) - Tablets */
+@media (min-width: 768px) {
+  .container {
+    max-width: var(--container-md);
+    padding-left: var(--container-padding-tablet);
+    padding-right: var(--container-padding-tablet);
+  }
+  
+  section {
+    scroll-snap-align: start;
+  }
+}
+
+/* Large devices (≥ 1024px) - Laptops */
+@media (min-width: 1024px) {
+  .container {
+    max-width: var(--container-lg);
+    padding-left: var(--container-padding-desktop);
+    padding-right: var(--container-padding-desktop);
+  }
+}
+
+/* Extra-large devices (≥ 1280px) - Desktops */
+@media (min-width: 1280px) {
+  .container {
+    max-width: var(--container-xl);
+  }
+}
+
+/* 2XL devices (≥ 1536px) - Wide screens */
 @media (min-width: 1536px) {
   .container {
-    max-width: 1440px; /* Prevents over-stretching */
+    max-width: var(--container-2xl);
+  }
+}
+
+/* ============================================
+   MOBILE OPTIMIZATIONS
+   ============================================ */
+
+/* Extra small devices (< 375px) */
+@media (max-width: 374px) {
+  .container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Handle mobile browser address bar */
+@media (max-width: 768px) {
+  section {
+    /* Use dynamic viewport height for better mobile support */
+    min-height: 100dvh;
+  }
+}
+
+/* ============================================
+   LANDSCAPE ORIENTATION
+   ============================================ */
+
+@media (max-width: 768px) and (orientation: landscape) {
+  section {
+    min-height: 100vh;
+    scroll-snap-align: start;
+  }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+  html {
+    scroll-snap-type: none;
+  }
+  
+  section {
+    min-height: auto;
+    page-break-inside: avoid;
+  }
+  
+  body {
+    background: #bd6b6b;
+    color: black;
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+    scroll-snap-type: none;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  body {
+    background: #000;
+    color: #fff;
+  }
+  
+  a:focus-visible {
+    outline-width: 3px;
+  }
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+/* Screen reader only content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Skip navigation link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-text-primary);
+  color: var(--color-bg-primary);
+  padding: 8px 16px;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Full viewport section variant */
+.section-full {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+/* Centered content wrapper */
+.section-content {
+  width: 100%;
+  max-width: var(--container-2xl);
+  padding: 2rem 1rem;
+}
+
+/* ============================================
+   BROWSER-SPECIFIC FIXES
+   ============================================ */
+
+/* Safari iOS viewport height fix */
+@supports (-webkit-touch-callout: none) {
+  section {
+    min-height: -webkit-fill-available;
+  }
+}
+
+/* Firefox scrollbar styling */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+/* Webkit scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* ============================================
+   PERFORMANCE OPTIMIZATIONS
+   ============================================ */
+
+/* GPU acceleration for transforms */
+.container,
+section {
+  will-change: transform;
+}
+
+/* Optimize repaints */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ============================================
+   DARK MODE SUPPORT (Optional)
+   ============================================ */
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-bg-primary: #f8f9fa;
+    --color-bg-secondary: #e9ecef;
+    --color-text-primary: #212529;
+  }
+  
+  body {
+    background: linear-gradient(
+      to bottom,
+      var(--color-bg-primary),
+      var(--color-bg-secondary)
+    );
+    color: var(--color-text-primary);
   }
 }

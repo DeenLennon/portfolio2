@@ -1,4 +1,4 @@
-.hero{
+/* .hero{
     height: 100%;
     overflow: hidden;
     display: flex;
@@ -15,7 +15,7 @@
 
 .hero-image{
     position: absolute;
-    /* top: 0; */
+     top: 0; 
     bottom: 0;
     right: 0;
     left: 0;
@@ -261,5 +261,669 @@
     .follow, .speech-bubble, .certificate{
         display: none;
     }
-} 
+}  */
 
+/* ============================================
+   HERO SECTION - BASE STYLES
+   ============================================ */
+
+.hero {
+  height: 100%;
+  min-height: 100vh;
+  /* overflow: hidden; */
+  display: flex;
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Background Layer */
+.bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  object-fit: cover;
+}
+
+/* Hero Image */
+.hero-image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  height: 80%;
+  width: max-content;
+  max-width: 90%;
+  z-index: 0;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Hero Sections */
+.hero-section {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+}
+
+.hero-section.right {
+  align-items: flex-end;
+}
+
+/* ============================================
+   HERO TITLE
+   ============================================ */
+
+.hero-title {
+  margin-top: 50px;
+  font-size: 56px;
+  color: #ff69b4;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.hero-title span {
+  color: #fff;
+  display: block;
+}
+
+/* ============================================
+   AWARDS SECTION
+   ============================================ */
+
+.awards {
+  width: 30%;
+  max-width: 300px;
+}
+
+.awards p {
+  font-size: 14px;
+  color: #ccc;
+  margin: 16px 0;
+  line-height: 1.5;
+}
+
+.awards-list {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.awards-list img {
+  width: 34px;
+  height: 34px;
+  padding: 8px;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.awards-list img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+/* ============================================
+   SCROLL INDICATOR
+   ============================================ */
+
+.scroll {
+  margin-bottom: 50px;
+  width: max-content;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.scroll:hover {
+  transform: translateY(5px);
+}
+
+/* ============================================
+   FOLLOW SECTION
+   ============================================ */
+
+.follow {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 14px;
+  background: #2f204e;
+  border-bottom-right-radius: 10px;
+}
+
+.follow img {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.follow img:hover {
+  opacity: 0.7;
+}
+
+.follow-text-container {
+  width: 15px;
+  height: 15px;
+  position: relative;
+}
+
+.follow-text {
+  background-color: #6c0459;
+  font-size: 12px;
+  rotate: 90deg;
+  width: max-content;
+  height: 100%;
+  transform-origin: left top;
+  transform: translateY(-20px);
+  padding: 0 8px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px 10px 0 10px;
+}
+
+/* ============================================
+   SPEECH BUBBLE
+   ============================================ */
+
+.speech-bubble {
+  width: 50%;
+  min-width: 250px;
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  justify-content: space-between;
+}
+
+.speech-bubble img {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #dd4c62;
+}
+
+.bubble {
+  width: 100%;
+  min-height: 100px;
+  background: #fff;
+  color: #555;
+  padding: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+  border-radius: 20px 20px 0 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   CERTIFICATE SECTION
+   ============================================ */
+
+.certificate {
+  width: 60%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  text-align: center;
+  line-height: 1.6;
+  font-weight: 300;
+  color: #ccc;
+  font-size: 14px;
+}
+
+.certificate img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+/* ============================================
+   CONTACT BUTTON
+   ============================================ */
+
+.contact-link {
+  margin-bottom: 50px;
+}
+
+.contact-btn {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.contact-btn:hover {
+  transform: scale(1.05);
+}
+
+.circleText {
+  letter-spacing: 3px;
+  font-size: 18px;
+}
+
+.arrow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+/* Extra Large Screens */
+@media (max-width: 1536px) {
+  .hero-title {
+    font-size: 64px;
+  }
+  
+  .hero {
+    padding: 15px;
+  }
+}
+
+/* Large Screens */
+@media (max-width: 1280px) {
+  .bg {
+    height: 60%;
+    top: auto;
+    bottom: 0;
+  }
+
+  .hero-image {
+    height: 100%;
+  }
+  
+  .hero-title {
+    font-size: 56px;
+  }
+
+  .awards {
+    width: 50%;
+  }
+
+  .speech-bubble {
+    width: 70%;
+  }
+  
+  .certificate {
+    width: 70%;
+  }
+}
+
+/* Medium Screens / Tablets Landscape */
+@media (max-width: 1024px) {
+  .bg {
+    height: 50%;
+  }
+
+  .hero-title {
+    font-size: 42px;
+    margin-top: 30px;
+  }
+  
+  .hero-section {
+    padding: 15px;
+  }
+  
+  .awards {
+    width: 60%;
+  }
+  
+  .speech-bubble {
+    width: 80%;
+    min-width: 200px;
+  }
+  
+  .bubble {
+    font-size: 14px;
+    padding: 16px;
+  }
+  
+  .certificate {
+    width: 80%;
+  }
+  
+  .certificate img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* Tablets Portrait */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .bg {
+    height: 60%;
+  }
+
+  .hero-section {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .hero-section.left {
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .hero-title {
+    font-size: 36px;
+    margin-top: 20px;
+  }
+
+  .awards {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .awards-list {
+    justify-content: center;
+  }
+
+  .hero-section.right {
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .follow,
+  .speech-bubble,
+  .certificate {
+    display: none;
+  }
+  
+  .scroll {
+    margin-bottom: 30px;
+  }
+  
+  .contact-link {
+    margin-bottom: 30px;
+  }
+}
+
+/* Large Mobile Devices */
+@media (max-width: 640px) {
+  .hero {
+    padding: 8px;
+  }
+  
+  .hero-title {
+    font-size: 32px;
+    margin-top: 15px;
+  }
+  
+  .hero-image {
+    height: 70%;
+  }
+  
+  .awards p {
+    font-size: 13px;
+  }
+  
+  .awards-list img {
+    width: 30px;
+    height: 30px;
+    padding: 6px;
+  }
+  
+  .circleText {
+    font-size: 16px;
+    letter-spacing: 2px;
+  }
+  
+  .arrow {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* Standard Mobile Devices (Most Phones) */
+@media (max-width: 480px) {
+  .hero {
+    padding: 6px;
+    min-height: 100dvh;
+  }
+  
+  .hero-section {
+    padding: 8px;
+  }
+  
+  .hero-title {
+    font-size: 28px;
+    margin-top: 10px;
+  }
+  
+  .hero-image {
+    height: 60%;
+    max-width: 95%;
+  }
+  
+  .awards {
+    width: 100%;
+  }
+  
+  .awards p {
+    font-size: 12px;
+    margin: 12px 0;
+  }
+  
+  .awards-list {
+    gap: 6px;
+  }
+  
+  .awards-list img {
+    width: 28px;
+    height: 28px;
+    padding: 5px;
+  }
+  
+  .scroll {
+    margin-bottom: 20px;
+    transform: scale(0.9);
+  }
+  
+  .contact-link {
+    margin-bottom: 20px;
+  }
+  
+  .circleText {
+    font-size: 14px;
+    letter-spacing: 1.5px;
+  }
+  
+  .arrow {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 375px) {
+  .hero {
+    padding: 5px;
+  }
+  
+  .hero-title {
+    font-size: 24px;
+    margin-top: 8px;
+  }
+  
+  .hero-image {
+    height: 55%;
+  }
+  
+  .awards p {
+    font-size: 11px;
+    margin: 10px 0;
+  }
+  
+  .awards-list img {
+    width: 26px;
+    height: 26px;
+    padding: 4px;
+  }
+  
+  .circleText {
+    font-size: 12px;
+  }
+  
+  .arrow {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Extra Small Mobile Devices */
+@media (max-width: 320px) {
+  .hero-title {
+    font-size: 22px;
+  }
+  
+  .hero-image {
+    height: 50%;
+  }
+  
+  .awards p {
+    font-size: 10px;
+  }
+  
+  .awards-list img {
+    width: 24px;
+    height: 24px;
+    padding: 4px;
+  }
+  
+  .circleText {
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+  
+  .arrow {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* Landscape Orientation for Mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .hero {
+    flex-direction: row;
+  }
+  
+  .hero-section {
+    width: 50%;
+  }
+  
+  .hero-title {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+  
+  .hero-image {
+    height: 90%;
+  }
+  
+  .bg {
+    height: 100%;
+  }
+  
+  .scroll,
+  .contact-link {
+    margin-bottom: 15px;
+  }
+  
+  .follow,
+  .speech-bubble,
+  .certificate {
+    display: none;
+  }
+}
+
+/* ============================================
+   TOUCH DEVICE OPTIMIZATIONS
+   ============================================ */
+
+@media (hover: none) and (pointer: coarse) {
+  .awards-list img,
+  .follow img,
+  .contact-btn {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  
+  .awards-list img:active {
+    transform: scale(0.95);
+  }
+  
+  .contact-btn:active {
+    transform: scale(0.98);
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .awards-list img,
+  .scroll,
+  .contact-btn,
+  .follow img {
+    transition: none;
+  }
+  
+  .awards-list img:hover,
+  .scroll:hover,
+  .contact-btn:hover {
+    transform: none;
+  }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+  .follow,
+  .scroll,
+  .contact-link {
+    display: none;
+  }
+  
+  .hero {
+    height: auto;
+    min-height: auto;
+  }
+}

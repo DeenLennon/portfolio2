@@ -1,4 +1,4 @@
-.portfolio{
+/* .portfolio{
     height: 600vh;
     position: relative;
 }
@@ -124,4 +124,494 @@
        height: 50px;
     }
 }
+ */
 
+
+/* ============================================
+   PORTFOLIO PAGINATION STYLES
+   ============================================ */
+
+.portfolio {
+  position: relative;
+  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.portfolio-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.portfolio-item {
+  position: absolute;
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* ============================================
+   PORTFOLIO IMAGE
+   ============================================ */
+
+.pImg {
+  flex: 1;
+  max-width: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.pImg img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* ============================================
+   PORTFOLIO TEXT
+   ============================================ */
+
+.pText {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #fff;
+}
+
+.pText h2 {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.pText p {
+  font-size: 18px;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.pText button {
+  background: #fff;
+  color: #667eea;
+  border: none;
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.pText button:hover {
+  background: #f0f0f0;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.pText button:active {
+  transform: translateY(0);
+}
+
+/* ============================================
+   NAVIGATION BUTTONS
+   ============================================ */
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.nav-button:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.nav-button:active:not(:disabled) {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.nav-button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.nav-button-prev {
+  left: 40px;
+}
+
+.nav-button-next {
+  right: 40px;
+}
+
+/* ============================================
+   PAGINATION DOTS
+   ============================================ */
+
+.pagination-dots {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 12px 20px;
+  border-radius: 50px;
+}
+
+.pagination-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.pagination-dot:hover {
+  border-color: #fff;
+  transform: scale(1.2);
+}
+
+.pagination-dot.active {
+  background: #fff;
+  border-color: #fff;
+  width: 32px;
+  border-radius: 6px;
+}
+
+/* ============================================
+   PROJECT COUNTER
+   ============================================ */
+
+.project-counter {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 12px 24px;
+  border-radius: 50px;
+  z-index: 10;
+}
+
+.current-number {
+  font-size: 32px;
+  color: #fff;
+}
+
+.separator {
+  opacity: 0.5;
+}
+
+.total-number {
+  opacity: 0.7;
+  font-size: 20px;
+}
+
+/* ============================================
+   PROGRESS BAR
+   ============================================ */
+
+.progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  z-index: 10;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #fff, #ffd700);
+  border-radius: 2px;
+}
+
+/* ============================================
+   SCREEN READER ONLY
+   ============================================ */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .portfolio-item {
+    flex-direction: column;
+    gap: 30px;
+    max-width: 600px;
+  }
+
+  .pImg {
+    max-width: 100%;
+  }
+
+  .pText h2 {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .pText p {
+    text-align: center;
+  }
+
+  .pText button {
+    align-self: center;
+  }
+
+  .nav-button-prev {
+    left: 20px;
+  }
+
+  .nav-button-next {
+    right: 20px;
+  }
+
+  .project-counter {
+    top: 20px;
+    right: 20px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .portfolio-container {
+    padding: 20px;
+  }
+
+  .portfolio-item {
+    gap: 20px;
+  }
+
+  .pText h2 {
+    font-size: 28px;
+  }
+
+  .pText p {
+    font-size: 16px;
+  }
+
+  .pText button {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+
+  .nav-button {
+    width: 50px;
+    height: 50px;
+  }
+
+  .nav-button-prev {
+    left: 10px;
+  }
+
+  .nav-button-next {
+    right: 10px;
+  }
+
+  .pagination-dots {
+    bottom: 60px;
+    gap: 10px;
+    padding: 10px 16px;
+  }
+
+  .pagination-dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .pagination-dot.active {
+    width: 24px;
+  }
+
+  .project-counter {
+    top: 20px;
+    right: 20px;
+    font-size: 18px;
+    padding: 8px 16px;
+  }
+
+  .current-number {
+    font-size: 24px;
+  }
+
+  .total-number {
+    font-size: 16px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .portfolio-container {
+    padding: 15px;
+  }
+
+  .pText h2 {
+    font-size: 24px;
+  }
+
+  .pText p {
+    font-size: 14px;
+  }
+
+  .nav-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .nav-button svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .pagination-dots {
+    bottom: 40px;
+    gap: 8px;
+    padding: 8px 12px;
+  }
+
+  .pagination-dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .pagination-dot.active {
+    width: 20px;
+  }
+
+  .project-counter {
+    font-size: 16px;
+    padding: 6px 12px;
+  }
+
+  .current-number {
+    font-size: 20px;
+  }
+
+  .total-number {
+    font-size: 14px;
+  }
+}
+
+/* Landscape Mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .portfolio-item {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .pImg {
+    max-width: 45%;
+  }
+
+  .pText h2 {
+    font-size: 24px;
+    text-align: left;
+  }
+
+  .pText p {
+    font-size: 14px;
+    text-align: left;
+  }
+
+  .pText button {
+    align-self: flex-start;
+  }
+
+  .pagination-dots {
+    bottom: 20px;
+  }
+}
+
+/* Touch Devices */
+@media (hover: none) and (pointer: coarse) {
+  .nav-button,
+  .pagination-dot,
+  .pText button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+
+.portfolio:focus {
+  outline: none;
+}
+
+.nav-button:focus-visible,
+.pagination-dot:focus-visible,
+.pText button:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

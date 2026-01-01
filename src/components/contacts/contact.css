@@ -1,4 +1,4 @@
-.contact{
+/* .contact{
     height: 100%;
     display: flex;
     gap: 100px;
@@ -69,5 +69,517 @@ label{
     }
     .contact-section:last-child{
         height: 30%;
+    }
+} */
+
+
+/* Base Styles - Desktop */
+.contact {
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    gap: 100px;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.contact-section {
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+form {
+    width: 80%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-size: 13px;
+    font-weight: 500;
+    color: #333;
+}
+
+input,
+textarea {
+    padding: 12px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #dd3c62;
+    box-shadow: 0 0 0 3px rgba(221, 60, 98, 0.1);
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-btn {
+    background: #dd3c62;
+    color: #fff;
+    padding: 16px 24px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+.form-btn:hover {
+    background: #c22f54;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(221, 60, 98, 0.3);
+}
+
+.form-btn:active {
+    transform: translateY(0);
+}
+
+/* Extra Large Screens */
+@media (max-width: 1536px) {
+    .contact {
+        gap: 80px;
+    }
+    
+    form {
+        width: 85%;
+    }
+}
+
+/* Large Screens */
+@media (max-width: 1280px) {
+    .contact {
+        gap: 60px;
+        padding: 30px 15px;
+    }
+    
+    form {
+        width: 90%;
+    }
+    
+    .contact-section {
+        padding: 15px;
+    }
+}
+
+/* Medium Screens / Tablets Landscape */
+@media (max-width: 1024px) {
+    .contact {
+        gap: 40px;
+        padding: 25px 12px;
+    }
+    
+    form {
+        width: 95%;
+        gap: 18px;
+    }
+    
+    input,
+    textarea {
+        padding: 11px 14px;
+    }
+    
+    .form-btn {
+        padding: 15px 22px;
+    }
+}
+
+/* Tablets Portrait */
+@media (max-width: 768px) {
+    .contact {
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px 10px;
+        min-height: auto;
+    }
+    
+    .contact-section {
+        width: 100%;
+        height: auto;
+        padding: 15px 10px;
+    }
+    
+    .contact-section:first-child {
+        min-height: auto;
+    }
+    
+    .contact-section:last-child {
+        min-height: auto;
+    }
+    
+    form {
+        width: 100%;
+        max-width: 500px;
+        gap: 16px;
+    }
+    
+    label {
+        font-size: 12px;
+    }
+    
+    input,
+    textarea {
+        padding: 10px 14px;
+        font-size: 13px;
+        border-radius: 6px;
+    }
+    
+    textarea {
+        min-height: 100px;
+    }
+    
+    .form-btn {
+        padding: 14px 20px;
+        font-size: 15px;
+        border-radius: 8px;
+    }
+}
+
+/* Large Mobile Devices */
+@media (max-width: 640px) {
+    .contact {
+        gap: 20px;
+        padding: 15px 8px;
+    }
+    
+    .contact-section {
+        padding: 12px 8px;
+    }
+    
+    form {
+        width: 100%;
+        gap: 14px;
+    }
+    
+    .form-item {
+        gap: 8px;
+    }
+    
+    label {
+        font-size: 11px;
+    }
+    
+    input,
+    textarea {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+    
+    textarea {
+        min-height: 90px;
+    }
+    
+    .form-btn {
+        padding: 13px 18px;
+        font-size: 14px;
+    }
+}
+
+/* Standard Mobile Devices (Most Phones) */
+@media (max-width: 480px) {
+    .contact {
+        gap: 15px;
+        padding: 12px 6px;
+    }
+    
+    .contact-section {
+        padding: 10px 6px;
+    }
+    
+    form {
+        gap: 12px;
+    }
+    
+    .form-item {
+        gap: 6px;
+    }
+    
+    label {
+        font-size: 11px;
+    }
+    
+    input,
+    textarea {
+        padding: 9px 12px;
+        font-size: 12px;
+        border-radius: 5px;
+    }
+    
+    textarea {
+        min-height: 80px;
+    }
+    
+    .form-btn {
+        padding: 12px 16px;
+        font-size: 13px;
+        border-radius: 6px;
+        margin-top: 5px;
+    }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 375px) {
+    .contact {
+        padding: 10px 5px;
+        gap: 12px;
+    }
+    
+    .contact-section {
+        padding: 8px 5px;
+    }
+    
+    form {
+        gap: 10px;
+    }
+    
+    .form-item {
+        gap: 5px;
+    }
+    
+    label {
+        font-size: 10px;
+    }
+    
+    input,
+    textarea {
+        padding: 8px 10px;
+        font-size: 11px;
+    }
+    
+    textarea {
+        min-height: 70px;
+    }
+    
+    .form-btn {
+        padding: 11px 14px;
+        font-size: 12px;
+    }
+}
+
+/* Extra Small Mobile Devices */
+@media (max-width: 320px) {
+    .contact {
+        padding: 8px 4px;
+        gap: 10px;
+    }
+    
+    .contact-section {
+        padding: 6px 4px;
+    }
+    
+    form {
+        gap: 8px;
+    }
+    
+    label {
+        font-size: 9px;
+    }
+    
+    input,
+    textarea {
+        padding: 7px 9px;
+        font-size: 10px;
+    }
+    
+    textarea {
+        min-height: 60px;
+    }
+    
+    .form-btn {
+        padding: 10px 12px;
+        font-size: 11px;
+    }
+}
+
+/* Landscape Orientation for Mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .contact {
+        flex-direction: row;
+        gap: 20px;
+        min-height: auto;
+    }
+    
+    .contact-section {
+        width: 50%;
+        padding: 10px;
+    }
+    
+    form {
+        gap: 10px;
+    }
+    
+    .form-item {
+        gap: 5px;
+    }
+    
+    input,
+    textarea {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+    
+    textarea {
+        min-height: 60px;
+    }
+    
+    .form-btn {
+        padding: 10px 16px;
+        margin-top: 5px;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+    input,
+    textarea,
+    .form-btn {
+        min-height: 44px; /* Minimum touch target size */
+    }
+    
+    .form-btn {
+        padding: 14px 24px;
+    }
+    
+    /* Better tap feedback */
+    input:active,
+    textarea:active {
+        opacity: 0.9;
+    }
+    
+    .form-btn:active {
+        background: #b8234a;
+        transform: scale(0.98);
+    }
+    
+    /* Remove tap highlight */
+    input,
+    textarea,
+    .form-btn {
+        -webkit-tap-highlight-color: transparent;
+    }
+}
+
+/* Accessibility: Focus Visible */
+input:focus-visible,
+textarea:focus-visible,
+.form-btn:focus-visible {
+    outline: 2px solid #dd3c62;
+    outline-offset: 2px;
+}
+
+/* Accessibility: Reduce Motion */
+@media (prefers-reduced-motion: reduce) {
+    input,
+    textarea,
+    .form-btn {
+        transition: none;
+    }
+    
+    .form-btn:hover {
+        transform: none;
+    }
+}
+
+/* Loading State (Optional - Add class via JavaScript) */
+.form-btn.loading {
+    background: #999;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.form-btn.loading::after {
+    content: '...';
+    animation: loading 1s infinite;
+}
+
+@keyframes loading {
+    0%, 100% { content: '.'; }
+    33% { content: '..'; }
+    66% { content: '...'; }
+}
+
+/* Error State (Optional - Add class via JavaScript) */
+input.error,
+textarea.error {
+    border-color: #e53e3e;
+}
+
+input.error:focus,
+textarea.error:focus {
+    box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.1);
+}
+
+/* Success State (Optional - Add class via JavaScript) */
+input.success,
+textarea.success {
+    border-color: #38a169;
+}
+
+input.success:focus,
+textarea.success:focus {
+    box-shadow: 0 0 0 3px rgba(56, 161, 105, 0.1);
+}
+
+/* Disabled State */
+input:disabled,
+textarea:disabled,
+.form-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Placeholder Styling */
+input::placeholder,
+textarea::placeholder {
+    color: #999;
+    opacity: 1;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    label {
+        color: #e0e0e0;
+    }
+    
+    input,
+    textarea {
+        background: #2a2a2a;
+        color: #fff;
+        border-color: #444;
+    }
+    
+    input:focus,
+    textarea:focus {
+        border-color: #dd3c62;
+        background: #333;
+    }
+    
+    input::placeholder,
+    textarea::placeholder {
+        color: #666;
     }
 }
