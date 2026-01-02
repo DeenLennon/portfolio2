@@ -94,7 +94,7 @@ const Hero = () => {
         </motion.div>
         <motion.a href="#contact" className="contact-link" animate={{x: [200, 0], opacity: [0, 1]}} transition={{duration: 2}}>
           <motion.div className="contact-btn" animate={{rotate: [0,360]}} transition={{duration: 10, repeat: Infinity, ease: "linear"}}>
-            <svg viewBox="0 0 200 200" width="150" height="150">
+            <svg className="circle-svg" viewBox="0 0 200 200" width="150" height="150">
               <circle cx="100" cy="100" r="90" fill="pink" />
               <path
                 id="innerCirclePath"
