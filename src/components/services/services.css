@@ -388,7 +388,6 @@
 
   .services-section {
     position: relative;
-    overflow: hidden;
   }
 
   .services-section.left {
@@ -402,8 +401,10 @@
   }
 
   .section-title {
-    font-size: 32px;
-    margin-left: 10px;
+    position: absolute;
+    top: 100px;
+    left: -20px;
+    font-size: 23px;
     margin-bottom: 15px;
     line-height: 1.2;
   }
@@ -429,7 +430,7 @@
 
   .service {
     width: 50%;
-    padding: 15px;
+    padding: 10px;
     border-radius: 20px;
     background: #2f213f;
     display: flex;
@@ -471,14 +472,14 @@
 
   .service-info h2 {
     color: #bda786;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
     margin-bottom: 4px;
     margin-top: 0;
   }
 
   .service-info h3 {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 300;
     margin: 0;
   }
@@ -513,6 +514,7 @@
     display: flex;
     gap: 5px;
     margin: 0;
+    margin-right: -50px;
     padding: 0;
   }
 
@@ -520,24 +522,23 @@
     position: absolute;
     top: 0;
     left: -40px;
-    font-size: 30px;
+    font-size: 20px;
     color: #f83d8e;
   }
 
   .counter p {
     top: 20px;
-    font-size: 16px;
-    margin-top: 35px;
+    font-size: 10px;
+    margin-top: 25px;
   }
 
   .services-section.right {
     position: absolute;
     top: -50px;
-    left: 340px;
+    left: 240px;
     width: 60%;
     height: 100vh;
     max-width: 600px;
-    overflow: hidden;
   }
 
   .services-section.right canvas{
@@ -549,9 +550,531 @@
 
 }
 
+@media (max-width: 375px) {
+  .services {
+    background: #25014e;
+    position: relative;
+    height: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    padding: 10px 5px;
+    box-sizing: border-box;
+  }
 
-/* Extra Small Mobile Devices */
+  .services-section {
+    position: relative;
+  }
+
+  .services-section.left {
+    position: absolute;
+    top: -30px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .section-title {
+    position: absolute;
+    top: 125px;
+    left: -20px;
+    font-size: 22px;
+    margin-bottom: 15px;
+    line-height: 1.2;
+  }
+
+  .service-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  .service:nth-child(1) {
+    background: #17817c;
+  }
+
+  .service:nth-child(2) {
+    background: #12267e;
+  }
+
+  .service:nth-child(3) {
+    background: #048f94;
+  }
+
+  .service {
+    width: 60%;
+    padding: 10px;
+    border-radius: 20px;
+    background: #2f213f;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+  }
+
+  .service:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .service-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .service-icon img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+  }
+
+  .service-info {
+    flex: 1;
+  }
+
+  .services-section.left h1 {
+    margin-left: 40px;
+  }
+
+  .service-info h2 {
+    color: #bda786;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    margin-top: 0;
+  }
+
+  .service-info h3 {
+    font-size: 10px;
+    font-weight: 300;
+    margin: 0;
+  }
+
+  /* Service Icon Colors */
+  .service:nth-child(1) .service-icon {
+    background: #bba2b9;
+  }
+
+  .service:nth-child(2) .service-icon {
+    background: #70cd98;
+  }
+
+  .service:nth-child(3) .service-icon {
+    background: #e1d392;
+  }
+
+  /* Counter Section */
+  .counter-list {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 10px;
+    padding: 0 10px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .counter {
+    position: relative;
+    display: flex;
+    gap: 5px;
+    margin: 0;
+    margin-right: -80px;
+    padding: 0;
+  }
+
+  .counter h1 {
+    position: absolute;
+    top: 0;
+    left: -30px;
+    font-size: 20px;
+    color: #f83d8e;
+  }
+
+  .counter p {
+    top: 20px;
+    font-size: 10px;
+    margin-top: 25px;
+  }
+
+  .services-section.right {
+    position: absolute;
+    top: -50px;
+    left: 220px;
+    width: 50%;
+    height: 100vh;
+    max-width: 600px;
+  }
+
+  .services-section.right canvas{
+    position: absolute;
+    width: 40%;
+    height: 100vh;
+    max-width: 500px;
+  }
+
+}
+
+@media (max-width: 360px) {
+  .services {
+    background: #25014e;
+    position: relative;
+    height: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    padding: 10px 5px;
+    box-sizing: border-box;
+  }
+
+  .services-section {
+    position: relative;
+  }
+
+  .services-section.left {
+    position: absolute;
+    top: -30px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .section-title {
+    position: absolute;
+    top: 125px;
+    left: -28px;
+    font-size: 22px;
+    margin-bottom: 15px;
+    line-height: 1.2;
+  }
+
+  .service-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  .service:nth-child(1) {
+    background: #17817c;
+  }
+
+  .service:nth-child(2) {
+    background: #12267e;
+  }
+
+  .service:nth-child(3) {
+    background: #048f94;
+  }
+
+  .service {
+    width: 60%;
+    padding: 10px;
+    border-radius: 20px;
+    background: #2f213f;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+  }
+
+  .service:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .service-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .service-icon img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+  }
+
+  .service-info {
+    flex: 1;
+  }
+
+  .services-section.left h1 {
+    margin-left: 40px;
+  }
+
+  .service-info h2 {
+    color: #bda786;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    margin-top: 0;
+  }
+
+  .service-info h3 {
+    font-size: 10px;
+    font-weight: 300;
+    margin: 0;
+  }
+
+  /* Service Icon Colors */
+  .service:nth-child(1) .service-icon {
+    background: #bba2b9;
+  }
+
+  .service:nth-child(2) .service-icon {
+    background: #70cd98;
+  }
+
+  .service:nth-child(3) .service-icon {
+    background: #e1d392;
+  }
+
+  /* Counter Section */
+  .counter-list {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 10px;
+    padding: 0 10px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .counter {
+    position: relative;
+    display: flex;
+    gap: 5px;
+    margin: 0;
+    margin-right: -80px;
+    padding: 0;
+  }
+
+  .counter h1 {
+    position: absolute;
+    top: 0;
+    left: -30px;
+    font-size: 20px;
+    color: #f83d8e;
+  }
+
+  .counter p {
+    top: 20px;
+    font-size: 10px;
+    margin-top: 25px;
+  }
+
+  .services-section.right {
+    position: absolute;
+    top: -50px;
+    left: 205px;
+    width: 50%;
+    height: 100vh;
+    max-width: 600px;
+  }
+
+  .services-section.right canvas{
+    position: absolute;
+    width: 40%;
+    height: 100vh;
+    max-width: 500px;
+  }
+
+}
+
 @media (max-width: 320px) {
+  .services {
+    background: #25014e;
+    position: relative;
+    height: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 5px;
+    box-sizing: border-box;
+  }
+
+  .services-section {
+    position: relative;
+  }
+
+  .services-section.left {
+    position: absolute;
+    top: -80px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .section-title {
+    position: absolute;
+    top: 119px;
+    left: -28px;
+    font-size: 22px;
+    margin-bottom: 15px;
+    line-height: 1.2;
+  }
+
+  .service-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  .service:nth-child(1) {
+    background: #17817c;
+  }
+
+  .service:nth-child(2) {
+    background: #12267e;
+  }
+
+  .service:nth-child(3) {
+    background: #048f94;
+  }
+
+  .service {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    background: #2f213f;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+  }
+
+  .service:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .service-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .service-icon img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+  }
+
+  .service-info {
+    flex: 1;
+  }
+
+  .services-section.left h1 {
+    margin-left: 90px;
+  }
+
+  .service-info h2 {
+    color: #bda786;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    margin-top: 0;
+    margin-left: 80px;
+  }
+
+  .service-info h3 {
+    font-size: 14px;
+    font-weight: 300;
+    margin-left: 80px;
+  }
+
+  /* Service Icon Colors */
+  .service:nth-child(1) .service-icon {
+    background: #bba2b9;
+  }
+
+  .service:nth-child(2) .service-icon {
+    background: #70cd98;
+  }
+
+  .service:nth-child(3) .service-icon {
+    background: #e1d392;
+  }
+
+  /* Counter Section */
+  .counter-list {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+
+  .counter {
+    position: relative;
+    display: flex;
+    margin-right: -130px;
+    padding: 0;
+  }
+
+  .counter h1 {
+    position: absolute;
+    top: 0;
+    font-size: 20px;
+    color: #f83d8e;
+  }
+
+  .counter p {
+    font-size: 12px;
+    margin-top: 25px;
+    margin-left: 55px;
+  }
+
+  .services-section.right {
+    position: absolute;
+    top: 150px;
+    left: 50px;
+    width: 70%;
+    height: 100vh;
+    max-width: 600px;
+  }
+
+  .services-section.right canvas{
+    position: absolute;
+    width: 60%;
+    height: 100vh;
+    max-width: 500px;
+  }
+
 }
 
 /* Landscape Orientation for Mobile */

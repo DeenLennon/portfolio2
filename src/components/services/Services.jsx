@@ -102,8 +102,8 @@ const Services = () => {
           ))}
         </motion.div>
         <div className="counter-list">
-          <Counter from={0} to={104} text="Projects Completed" />
-          <Counter from={0} to={72} text="Happy Clients" />
+          <Counter from={0} to={30} text="Projects Completed" />
+          <Counter from={0} to={20} text="Clients" />
         </div>
       </div>
       <div className="services-section right">{
