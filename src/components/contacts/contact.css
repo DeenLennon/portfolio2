@@ -187,7 +187,7 @@ textarea {
 /* Large Mobile Devices */
 @media (max-width: 640px) {
     .contact {
-        gap: 20px;
+        gap: 10px;
         padding: 15px 8px;
     }
     
@@ -227,7 +227,7 @@ textarea {
 /* Standard Mobile Devices (Most Phones) */
 @media (max-width: 480px) {
     .contact {
-        gap: 15px;
+        gap: 10px;
         padding: 12px 6px;
     }
     
@@ -269,20 +269,21 @@ textarea {
 /* Small Mobile Devices */
 @media (max-width: 375px) {
     .contact {
-        padding: 10px 5px;
-        gap: 12px;
+        position: relative;
+        padding: 5px 5px;
+        gap: 5px;
     }
     
     .contact-section {
-        padding: 8px 5px;
+        padding: 5px 5px;
     }
     
     form {
-        gap: 10px;
+        gap: 5px;
     }
     
     .form-item {
-        gap: 5px;
+        gap: 3px;
     }
     
     label {
@@ -296,47 +297,66 @@ textarea {
     }
     
     textarea {
-        min-height: 70px;
+        min-height: 50px;
     }
     
     .form-btn {
-        padding: 11px 14px;
+        padding: 10px 10px;
         font-size: 12px;
+    }
+
+    .contact-svg{
+        position: absolute;
+        top: 350px;
+        left: 50px;
+        width: 70%;
     }
 }
 
 /* Extra Small Mobile Devices */
 @media (max-width: 320px) {
     .contact {
-        padding: 8px 4px;
-        gap: 10px;
+        position: relative;
+        padding: 5px 5px;
+        gap: 5px;
     }
     
     .contact-section {
-        padding: 6px 4px;
+        padding: 5px 5px;
     }
     
     form {
-        gap: 8px;
+        gap: 5px;
+    }
+    
+    .form-item {
+        gap: 3px;
     }
     
     label {
-        font-size: 9px;
+        font-size: 10px;
     }
     
     input,
     textarea {
-        padding: 7px 9px;
-        font-size: 10px;
+        padding: 8px 10px;
+        font-size: 11px;
     }
     
     textarea {
-        min-height: 60px;
+        min-height: 50px;
     }
     
     .form-btn {
-        padding: 10px 12px;
-        font-size: 11px;
+        padding: 10px 10px;
+        font-size: 12px;
+    }
+
+    .contact-svg{
+        position: absolute;
+        top: 355px;
+        left: 50px;
+        width: 70%;
     }
 }
 

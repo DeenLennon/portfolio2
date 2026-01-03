@@ -41,19 +41,19 @@ const services = [
     id: 1,
     img: "/developer.png",
     title: "Web Development",
-    counter: 35,
+    counter: 10,
   },
   {
     id: 2,
     img: "/business.png",
     title: "Product Design",
-    counter: 23,
+    counter: 15,
   },
   {
     id: 3,
     img: "/brand.png",
     title: "Branding",
-    counter: 46,
+    counter: 25,
   },
 ];
 
@@ -75,7 +75,7 @@ const Services = () => {
           animate={isInView ? "animate" : undefined}
           className="section-title"
         >
-          You need a developer.
+          * * Our Services * *
         </motion.h1>
         <motion.div
           ref={ref}

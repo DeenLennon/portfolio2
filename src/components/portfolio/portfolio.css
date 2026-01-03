@@ -1,135 +1,3 @@
-/* .portfolio{
-    height: 600vh;
-    position: relative;
-}
-
-.portfolio-list{
-    position: sticky;
-    top: 0;
-    display: flex;
-    height: 100vh;
-    width: max-content;
-}
-
-.portfolio-item{
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-}
-
-.portfolio-item:nth-child(1){
-    background: linear-gradient(to right, #da5a10f3, #256169);
-}
-
-.portfolio-item:nth-child(2){
-    background: linear-gradient(to right, #256169, #da2403);
-}
-
-.portfolio-item:nth-child(3){
-    background: linear-gradient(to right, #da2403, #0c7074);
-}
-
-.portfolio-item:nth-child(4){
-    background: linear-gradient(to right, #0c7074, #2e2e3a);
-}
-
-.portfolio-item:nth-child(5){
-    background: linear-gradient(to right, #2e2e3a, #da5a10f3);
-}
-
-.progress-bar{
-    position: sticky;
-    width: 80px;
-    height: 80px;
-    left: 0;
-    bottom: 80%;
-}
-
-.pImg{
-    width: 40%;
-    border-radius: 20px;
-    overflow: hidden;
-}
-
-.pImg img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.pText{
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.pText h1{
-    font-size: 56px;
-    line-height: 1;
-}
-
-.pText p{
-    font-weight: 300;
-}
-
-.pText button{
-    background: #084047;
-    padding: 10px;
-    border: none;
-    font-weight: 500;
-    border-radius: 8px;
-    color: #fff;
-    cursor: pointer;
-}
-
-@media (max-width: 1536px){
-    .portfolio-item{
-        gap: 15px;
-    }
-}
-
-@media (max-width: 1280px){
-    .pText h1{
-        font-size: 48px;
-    }
-}
-
-@media (max-width: 1024px){
-    .portfolio-item{
-        flex-direction: column;
-    }
-
-    .portfolio-list .empty{
-        display: none;
-    }
-
-    .pImg, .pText{
-        width: 80%;
-    }
-
-    .progress-bar{
-        bottom: 100px;
-        left: 100%;
-    }
-}
-
-@media (max-width: 768px){
-    .progress-bar{
-       width: 50px;
-       height: 50px;
-    }
-}
- */
-
-
-/* ============================================
-   PORTFOLIO PAGINATION STYLES
-   ============================================ */
 
 .portfolio {
   position: relative;
@@ -246,8 +114,8 @@
   backdrop-filter: blur(10px);
   border: 2px solid rgba(255, 255, 255, 0.3);
   color: #fff;
-  width: 60px;
-  height: 60px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -291,18 +159,18 @@
   display: flex;
   gap: 12px;
   z-index: 10;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(6, 143, 153, 0.788);
   backdrop-filter: blur(10px);
   padding: 12px 20px;
   border-radius: 50px;
 }
 
 .pagination-dot {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  background: transparent;
+  border: 2px solid rgba(162, 240, 229, 0.884);
+  background: #1818df;
   cursor: pointer;
   transition: all 0.3s ease;
   padding: 0;
@@ -316,7 +184,7 @@
 .pagination-dot.active {
   background: #fff;
   border-color: #fff;
-  width: 32px;
+  width: 20px;
   border-radius: 6px;
 }
 
@@ -331,18 +199,18 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 600;
   color: #fff;
   background: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
-  padding: 12px 24px;
+  padding: 8px 10px;
   border-radius: 50px;
   z-index: 10;
 }
 
 .current-number {
-  font-size: 32px;
+  font-size: 20px;
   color: #fff;
 }
 
@@ -352,7 +220,7 @@
 
 .total-number {
   opacity: 0.7;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 /* ============================================
@@ -437,29 +305,39 @@
 /* Mobile Devices */
 @media (max-width: 768px) {
   .portfolio-container {
-    padding: 20px;
+    padding: 10px;
+    position: relative;
   }
 
   .portfolio-item {
+    flex-direction: row;
     gap: 20px;
+    max-width: 600px;
+  }
+
+  .pImg {
+    max-width: 80%;
   }
 
   .pText h2 {
-    font-size: 28px;
+    font-size: 20px;
+    text-align: left;
   }
 
   .pText p {
-    font-size: 16px;
+    font-size: 18px;
+    text-align: left;
+    line-height: 1.2;
   }
 
   .pText button {
-    padding: 12px 24px;
+    padding: 10px 20px;
     font-size: 14px;
   }
 
   .nav-button {
-    width: 50px;
-    height: 50px;
+    width: 15px;
+    height: 15px;
   }
 
   .nav-button-prev {
@@ -473,31 +351,31 @@
   .pagination-dots {
     bottom: 60px;
     gap: 10px;
-    padding: 10px 16px;
+    padding: 5px 10px;
   }
 
   .pagination-dot {
-    width: 10px;
-    height: 10px;
+    width: 5px;
+    height: 5px;
   }
 
   .pagination-dot.active {
-    width: 24px;
+    width: 8px;
   }
 
   .project-counter {
     top: 20px;
     right: 20px;
     font-size: 18px;
-    padding: 8px 16px;
+    padding: 5px 10px;
   }
 
   .current-number {
-    font-size: 24px;
+    font-size: 18px;
   }
 
   .total-number {
-    font-size: 16px;
+    font-size: 12px;
   }
 }
 
@@ -505,6 +383,12 @@
 @media (max-width: 480px) {
   .portfolio-container {
     padding: 15px;
+  }
+
+  .portfolio-item {
+    flex-direction: column;
+    gap: 30px;
+    max-width: 600px;
   }
 
   .pText h2 {
@@ -516,19 +400,90 @@
   }
 
   .nav-button {
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
   }
 
   .nav-button svg {
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
   }
 
   .pagination-dots {
     bottom: 40px;
     gap: 8px;
-    padding: 8px 12px;
+    padding: 5px 10px;
+  }
+
+  .pagination-dot {
+    width: 5px;
+    height: 5px;
+  }
+
+  .pagination-dot.active {
+    width: 8px;
+  }
+
+  .project-counter {
+    font-size: 10px;
+    padding: 6px 12px;
+  }
+
+  .current-number {
+    font-size: 12px;
+  }
+
+  .total-number {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 375px) {
+  .portfolio-container {
+    padding: 12px;
+  }
+
+  .portfolio-item {
+    flex-direction: column;
+    gap: 24px;
+    max-width: 100%;
+  }
+
+  /* TEXT */
+  .pText h2 {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+
+  .pText p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  /* IMAGE – MADE BIGGER */
+  .portfolio-item img,
+  .portfolio-image {
+    width: 100%;
+    max-height: 260px;
+    object-fit: cover;
+  }
+
+  /* NAVIGATION BUTTONS – SMALLER */
+  .nav-button {
+    width: 18px;
+    height: 18px;
+  }
+
+  .nav-button svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  /* PAGINATION DOTS – SMALLER */
+  .pagination-dots {
+    bottom: 32px;
+    gap: 6px;
+    padding: 8px 10px;
   }
 
   .pagination-dot {
@@ -537,22 +492,24 @@
   }
 
   .pagination-dot.active {
-    width: 20px;
+    width: 10px;
   }
 
+  /* COUNTER */
   .project-counter {
-    font-size: 16px;
-    padding: 6px 12px;
+    font-size: 9px;
+    padding: 5px 10px;
   }
 
   .current-number {
-    font-size: 20px;
+    font-size: 11px;
   }
 
   .total-number {
-    font-size: 14px;
+    font-size: 9px;
   }
 }
+
 
 /* Landscape Mobile */
 @media (max-width: 768px) and (orientation: landscape) {
@@ -562,7 +519,7 @@
   }
 
   .pImg {
-    max-width: 45%;
+    max-width: 60%;
   }
 
   .pText h2 {

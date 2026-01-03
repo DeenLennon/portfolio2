@@ -69,7 +69,7 @@ const Contact = () => {
           {error && <span>Something went wrong!</span>}
         </motion.form>
       </div>
-      <div className="contact-section"><ContactSvg/></div>
+      <div className="contact-section contact-svg"><ContactSvg/></div>
     </div>
   )
 }
