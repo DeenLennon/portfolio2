@@ -755,7 +755,7 @@
 
   .section-title {
     position: absolute;
-    top: 105px;
+    top: 190px;
     left: -28px;
     font-size: 28px;
     margin-bottom: 15px;
@@ -765,7 +765,7 @@
   .service-list {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
     padding: 0 10px;
   }
 
@@ -883,7 +883,7 @@
 
   .services-section.right {
     position: absolute;
-    top: 150px;
+    top: 160px;
     left: 50px;
     width: 70%;
     height: 100vh;

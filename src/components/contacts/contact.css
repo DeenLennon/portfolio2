@@ -313,6 +313,52 @@ textarea {
     }
 }
 
+@media (max-width: 360px) {
+    .contact {
+        position: relative;
+        padding: 5px 5px;
+        gap: 5px;
+    }
+    
+    .contact-section {
+        padding: 5px 5px;
+    }
+    
+    form {
+        gap: 5px;
+    }
+    
+    .form-item {
+        gap: 3px;
+    }
+    
+    label {
+        font-size: 10px;
+    }
+    
+    input,
+    textarea {
+        padding: 8px 10px;
+        font-size: 11px;
+    }
+    
+    textarea {
+        min-height: 50px;
+    }
+    
+    .form-btn {
+        padding: 10px 10px;
+        font-size: 12px;
+    }
+
+    .contact-svg{
+        position: absolute;
+        top: 430px;
+        left: 50px;
+        width: 70%;
+    }
+}
+
 /* Extra Small Mobile Devices */
 @media (max-width: 320px) {
     .contact {

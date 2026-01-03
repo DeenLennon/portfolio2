@@ -1243,7 +1243,7 @@
 
   .hero-image {
     width: 80%;
-    padding-top: 140px;
+    padding-top: 170px;
   }
 
   .hero-section {
@@ -1277,7 +1277,7 @@
 
   .awards-list{
     position: absolute;
-    left: -10px;
+    left: 10px;
   }
 
   .mouse-svg{
@@ -1308,9 +1308,9 @@
 
   .speech-bubble {
     position: absolute;
-    top: 70px;
+    top: 190px;
     left: 50px;
-    width: 60%;
+    width: 70%;
     min-width: 250px;
     display: flex;
     align-items: flex-end;
@@ -1391,8 +1391,8 @@
     position: absolute;
     width: 60%;
     max-width: 300px;
-    top: -220px;
-    left: 145px;
+    top: -290px;
+    left: 155px;
     display: flex;
     flex-direction: column;
     gap: 5px;
