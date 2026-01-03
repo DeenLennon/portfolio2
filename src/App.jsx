@@ -1,8 +1,3 @@
-// import Hero from "./components/hero/Hero"
-// import Services from "./components/services/Services"
-// import Portfolio from "./components/portfolio/Portfolio"
-// import Contact from "./components/contacts/Contact"
-
 import {lazy, Suspense} from "react";
 import LoadingBar from "./components/loading/LoadingBar";
 
@@ -15,20 +10,20 @@ function App() {
 
   return (
     <div className="container">
-      <Suspense fallback={<LoadingBar/>} height={"100vh"} offset={-100}>
+      <Suspense fallback={<LoadingBar/>}>
       <section id="#home">
         <Hero/>
       </section>
       </Suspense>
-      <Suspense fallback={<LoadingBar/>} height={"100vh"} offset={-100}>
+      <Suspense fallback={<LoadingBar/>}>
       <section id="#services">
         <Services/>
       </section>
       </Suspense>
-      <Suspense fallback={<LoadingBar/>} height={"600vh"} offset={-100}>
+      <Suspense fallback={<LoadingBar/>}>
       <Portfolio/>
       </Suspense>
-      <Suspense fallback={<LoadingBar/>} height={"100vh"} offset={-100}>
+      <Suspense fallback={<LoadingBar/>}>
       <section id="#contact">
         <Contact/>
       </section>

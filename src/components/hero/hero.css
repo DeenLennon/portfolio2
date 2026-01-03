@@ -760,16 +760,16 @@
   }
 
   .bg {
-    height: 40%;
+    height: 100%;
   }
 
   .hero-image {
-    width: 40%;
+    width: 50%;
     padding-top: 50px;
   }
 
   .hero-section {
-    width: 100vw;
+    width: 100%;
     padding: 10px;
   }
 
@@ -782,11 +782,28 @@
   .hero-title {
     font-size: 36px;
     margin-top: 20px;
+    margin-left: -190px;
+    text-align: left;
   }
 
   .awards {
     width: 100%;
     max-width: 100%;
+    position: relative;
+  }
+
+  .awards p{
+     color: #2c280e;
+  }
+
+  .awards-list{
+    position: absolute;
+  }
+
+  .mouse-svg{
+    position: absolute;
+    top: 20px;
+    left: -190px;
   }
 
   h2 {
@@ -811,8 +828,8 @@
 
   .speech-bubble {
     position: absolute;
-    top: -50px;
-    left: 20px;
+    top: -10px;
+    left: 110px;
     width: 60%;
     min-width: 250px;
     display: flex;
@@ -846,7 +863,7 @@
 
   .follow {
     position: absolute;
-    top: -15px;
+    top: -280px;
     right: 0;
     margin: none;
     display: flex;
@@ -894,17 +911,25 @@
     position: absolute;
     width: 60%;
     max-width: 300px;
-    margin-top: 150px;
-    left: 130px;
+    top: -270px;
+    left: 250px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 5px;
     align-items: center;
     text-align: center;
-    line-height: 1.6;
+    line-height: 0.7;
     font-weight: 300;
-    color: #ccc;
+    color: #302003;
+    text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.8);
     font-size: 14px;
+  }
+
+  .certificate .dev-sec{
+    font-size: 22px;
+    font-weight: 600;
+    color: #886c1e;
+    padding-top: 5px;
   }
 
   .certificate img {
@@ -966,13 +991,7 @@
 }
 
 @media (max-width: 375px) {
-  *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
   .hero {
-    width: 100%;
     flex-direction: column;
     padding: 6px;
     min-height: 100dvh;
@@ -980,12 +999,11 @@
 
   .bg {
     height: 100%;
-    width: 100vw;
   }
 
   .hero-image {
-    width: 60%;
-    padding-top: 50px;
+    width: 80%;
+    padding-top: 140px;
   }
 
   .hero-section {
@@ -996,34 +1014,51 @@
   .hero-section.left {
     align-items: center;
     text-align: center;
-    gap: 10px;
+    gap: 20px;
   }
 
   .hero-title {
-    font-size: 22px;
+    font-size: 30px;
     margin-top: 15px;
+    margin-left: -140px;
+    text-align: left;
+    line-height: 1;
   }
 
   .awards {
     width: 100%;
     max-width: 100%;
+    position: relative;
+  }
+
+  .awards p{
+     color: #2c280e;
+  }
+
+  .awards-list{
+    position: absolute;
+  }
+
+  .mouse-svg{
+    position: absolute;
+    top: 20px;
+    left: -130px;
   }
 
   h2 {
     text-align: left;
     color: #fff;
-    font-size: 18px;
   }
 
   p {
-    width: 200px;
+    width: 220px;
     text-align: left;
     word-break: break-word;
     overflow-wrap: break-word;
   }
 
   .awards-list {
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   .hero-section.right {
@@ -1032,21 +1067,20 @@
 
   .speech-bubble {
     position: absolute;
-    top: 75px;
-    left: 55px;
+    top: 100px;
+    left: 65px;
     width: 60%;
     min-width: 250px;
     display: flex;
-    flex-direction: column;
     align-items: flex-end;
-    gap: 1px;
+    gap: 8px;
     justify-content: space-between;
   }
 
   .speech-bubble img {
     width: 40px;
     height: 50px;
-    margin-top: 10px;
+    margin-top: 120px;
     min-width: 50px;
     border-radius: 50%;
     object-fit: cover;
@@ -1054,13 +1088,13 @@
   }
 
   .bubble {
-    width: 90%;
+    width: 100%;
     min-height: 50px;
     text-align: center;
     background: #fff;
     color: #555;
-    padding: 15px 2px;
-    font-size: 10px;
+    padding: 15px 5px;
+    font-size: 12px;
     line-height: 1.5;
     border-radius: 20px 20px 0 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
@@ -1068,7 +1102,7 @@
 
   .follow {
     position: absolute;
-    top: -340px;
+    top: -250px;
     right: 0;
     margin: none;
     display: flex;
@@ -1116,17 +1150,25 @@
     position: absolute;
     width: 60%;
     max-width: 300px;
-    top: -130px;
-    left: -35px;
+    top: -270px;
+    left: 180px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 5px;
     align-items: center;
     text-align: center;
-    line-height: 1.6;
+    line-height: 0.7;
     font-weight: 300;
-    color: #01154d;
+    color: #302003;
+    text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.8);
     font-size: 14px;
+  }
+
+  .certificate .dev-sec{
+    font-size: 22px;
+    font-weight: 600;
+    color: #886c1e;
+    padding-top: 5px;
   }
 
   .certificate img {
@@ -1135,22 +1177,24 @@
     object-fit: contain;
   }
 
+  .contact-link {
+    height: 10%;
+    margin-bottom: 50px;
+    margin-top: 420px;
+  }
+
+  .contact-btn {
+    position: absolute;
+    left: 20px;
+    top: 100px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
   .circle-svg {
     width: 40%;
     height: auto;
     left: 130px;
-  }
-
-  .contact-link {
-    height: 10%;
-    margin-top: 150px;
-  }
-
-  .contact-btn {
-    position: relative;
-    left: 130px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
   }
 
   .contact-btn:hover {
@@ -1188,7 +1232,6 @@
 
 @media (max-width: 320px) {
   .hero {
-    width: 100%;
     flex-direction: column;
     padding: 6px;
     min-height: 100dvh;
@@ -1196,12 +1239,11 @@
 
   .bg {
     height: 100%;
-    width: 100vw;
   }
 
   .hero-image {
-    width: 60%;
-    padding-top: 50px;
+    width: 80%;
+    padding-top: 140px;
   }
 
   .hero-section {
@@ -1212,34 +1254,52 @@
   .hero-section.left {
     align-items: center;
     text-align: center;
-    gap: 10px;
+    gap: 20px;
   }
 
   .hero-title {
-    font-size: 22px;
+    font-size: 30px;
     margin-top: 15px;
+    margin-left: -90px;
+    text-align: left;
+    line-height: 1;
   }
 
   .awards {
     width: 100%;
     max-width: 100%;
+    position: relative;
+  }
+
+  .awards p{
+     color: #2c280e;
+  }
+
+  .awards-list{
+    position: absolute;
+    left: -10px;
+  }
+
+  .mouse-svg{
+    position: absolute;
+    top: 20px;
+    left: -120px;
   }
 
   h2 {
     text-align: left;
     color: #fff;
-    font-size: 18px;
   }
 
   p {
-    width: 200px;
+    width: 220px;
     text-align: left;
     word-break: break-word;
     overflow-wrap: break-word;
   }
 
   .awards-list {
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   .hero-section.right {
@@ -1248,21 +1308,20 @@
 
   .speech-bubble {
     position: absolute;
-    top: 75px;
-    left: 30px;
+    top: 100px;
+    left: 50px;
     width: 60%;
     min-width: 250px;
     display: flex;
-    flex-direction: column;
     align-items: flex-end;
-    gap: 1px;
+    gap: 8px;
     justify-content: space-between;
   }
 
   .speech-bubble img {
     width: 40px;
     height: 50px;
-    margin-top: 10px;
+    margin-top: 120px;
     min-width: 50px;
     border-radius: 50%;
     object-fit: cover;
@@ -1270,13 +1329,13 @@
   }
 
   .bubble {
-    width: 90%;
+    width: 100%;
     min-height: 50px;
     text-align: center;
     background: #fff;
     color: #555;
-    padding: 15px 2px;
-    font-size: 10px;
+    padding: 15px 5px;
+    font-size: 12px;
     line-height: 1.5;
     border-radius: 20px 20px 0 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
@@ -1284,7 +1343,7 @@
 
   .follow {
     position: absolute;
-    top: -340px;
+    top: -250px;
     right: 0;
     margin: none;
     display: flex;
@@ -1332,18 +1391,25 @@
     position: absolute;
     width: 60%;
     max-width: 300px;
-    top: -50px;
-    left: -20px;
+    top: -220px;
+    left: 145px;
     display: flex;
     flex-direction: column;
     gap: 5px;
     align-items: center;
     text-align: center;
-    line-height: 1;
-    font-weight: 500;
-    color: #6b5e3a;
+    line-height: 0.7;
+    font-weight: 300;
+    color: #302003;
+    text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.8);
     font-size: 14px;
-    font-family: sans-serif;
+  }
+
+  .certificate .dev-sec{
+    font-size: 22px;
+    font-weight: 600;
+    color: #886c1e;
+    padding-top: 5px;
   }
 
   .certificate img {
@@ -1352,22 +1418,24 @@
     object-fit: contain;
   }
 
+  .contact-link {
+    height: 10%;
+    margin-bottom: 50px;
+    margin-top: 420px;
+  }
+
+  .contact-btn {
+    position: absolute;
+    left: 20px;
+    top: 100px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
   .circle-svg {
     width: 40%;
     height: auto;
     left: 130px;
-  }
-
-  .contact-link {
-    height: 10%;
-    margin-top: 150px;
-  }
-
-  .contact-btn {
-    position: relative;
-    left: 130px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
   }
 
   .contact-btn:hover {
@@ -1402,6 +1470,7 @@
     margin-bottom: 30px;
   }
 }
+
 
 /* Landscape Orientation for Mobile */
 @media (max-width: 768px) and (orientation: landscape) {

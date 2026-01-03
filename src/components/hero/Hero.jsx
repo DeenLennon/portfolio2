@@ -53,7 +53,7 @@ const Hero = () => {
           </motion.div>
         </motion.div>
         <motion.a animate={{y:[0,5], opacity:[0,1,0]}} transition={{repeat: Infinity, duration: 4, ease: "easeInOut"}} href="#services" className="scroll">
-          <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none">
+          <svg className="mouse-svg" width="50px" height="50px" viewBox="0 0 24 24" fill="none">
             <path
               d="M5 9C5 5.13 8.13 2 12 2C15.87 2 19 5.13 19 9V15C19 18.87 15.87 22 12 22C8.13 22 5 18.87 5 15V9Z"
               stroke="white"
@@ -86,9 +86,9 @@ const Hero = () => {
         <Speech />
         <motion.div animate={{opacity: [0,1]}} transition={{duration: 1}} className="certificate">
           <img src="/certificate1.png" alt="" />
-          DEVSEC CERTIFIED
+          A CERTIFIED
           <br />
-          PROFESSIONAL
+          <span className="dev-sec">DevSecOps</span>
           <br />
           FULL STACK DEVELOPER
         </motion.div>
