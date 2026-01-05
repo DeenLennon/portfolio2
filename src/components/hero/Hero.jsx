@@ -44,7 +44,7 @@ const Hero = () => {
           <span>I'm Deen Lennon</span>
         </motion.h1>
         <motion.div variants={awardsVariants} initial="initial" animate="animate" className="awards">
-          <motion.h2 variants={awardsVariants}>Top Rated DevSec</motion.h2>
+          <motion.h2 variants={awardsVariants}>Top Rated DevSecOps</motion.h2>
           <motion.p variants={awardsVariants}>With hands on experience of Full Stack Web Development</motion.p>
           <motion.div variants={awardsVariants} className="awards-list">
             <motion.img variants={awardsVariants} src="/blogger.png" alt="" />
@@ -134,7 +134,7 @@ const Hero = () => {
           </Suspense>
         </Canvas>
         <div className="hero-image">
-          <img src="/student.png" alt="" />
+          <img src="/heropic.png" alt="" />
         </div>
       </div>
     </div>
