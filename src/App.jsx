@@ -11,20 +11,16 @@ function App() {
   return (
     <div className="container">
       <Suspense fallback={<LoadingBar/>}>
-      <section id="#home">
+      <section id="home">
         <Hero/>
       </section>
-      </Suspense>
-      <Suspense fallback={<LoadingBar/>}>
-      <section id="#services">
+      <section id="services">
         <Services/>
       </section>
-      </Suspense>
-      <Suspense fallback={<LoadingBar/>}>
+      <section id="portfolio">
       <Portfolio/>
-      </Suspense>
-      <Suspense fallback={<LoadingBar/>}>
-      <section id="#contact">
+      </section>
+      <section id="contact">
         <Contact/>
       </section>
       </Suspense>
