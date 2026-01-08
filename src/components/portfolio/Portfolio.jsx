@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./portfolio.css";
@@ -9,35 +8,40 @@ const PORTFOLIO_ITEMS = [
     id: 1,
     image: "/landingpage.jpg",
     title: "Web Development Tutorial Website",
-    description: "A comprehensive platform for learning modern web development techniques and best practices.",
+    description:
+      "A comprehensive platform for learning modern web development techniques and best practices.",
     link: "/projects/web-tutorial",
   },
   {
     id: 2,
     image: "/socialmediaapp.jpg",
     title: "Student-Based Social Media Application",
-    description: "A social networking platform designed specifically for student collaboration and engagement.",
+    description:
+      "A social networking platform designed specifically for student collaboration and engagement.",
     link: "/projects/student-social",
   },
   {
     id: 3,
     image: "/newsblog.jpg",
     title: "Real-Time News Blog Application",
-    description: "A dynamic news platform featuring live updates and engaging multimedia content.",
+    description:
+      "A dynamic news platform featuring live updates and engaging multimedia content.",
     link: "/projects/news-blog",
   },
   {
     id: 4,
     image: "/cssanimation.jpg",
     title: "Web Animation Full Course",
-    description: "Complete guide to creating stunning web animations using modern CSS and JavaScript.",
+    description:
+      "Complete guide to creating stunning web animations using modern CSS and JavaScript.",
     link: "/projects/animation-course",
   },
   {
     id: 5,
     image: "/Ecommerce.jpg",
     title: "E-commerce Platform for Electrical Solutions",
-    description: "Full-featured online store specializing in electrical products and solutions.",
+    description:
+      "Full-featured online store specializing in electrical products and solutions.",
     link: "/projects/ecommerce",
   },
 ];
@@ -98,10 +102,6 @@ const TEXT_VARIANTS = {
   },
 };
 
-/**
- * PortfolioItem Component
- * Displays individual portfolio item
- */
 const PortfolioItem = ({ item }) => {
   return (
     <motion.div
@@ -135,6 +135,14 @@ const PortfolioItem = ({ item }) => {
 const Portfolio = () => {
   const [[currentIndex, direction], setCurrentIndex] = useState([0, 0]);
 
+  // preload all portfolio images once
+  useEffect(() => {
+    PORTFOLIO_ITEMS.forEach((item) => {
+      const img = new Image();
+      img.src = item.image;
+    });
+  }, []);
+
   // Calculate current item
   const currentItem = PORTFOLIO_ITEMS[currentIndex];
 
@@ -153,7 +161,8 @@ const Portfolio = () => {
 
   // Navigate to previous item
   const goToPrevious = () => {
-    const newIndex = currentIndex === 0 ? PORTFOLIO_ITEMS.length - 1 : currentIndex - 1;
+    const newIndex =
+      currentIndex === 0 ? PORTFOLIO_ITEMS.length - 1 : currentIndex - 1;
     setCurrentIndex([newIndex, -1]);
   };
 
@@ -215,11 +224,17 @@ const Portfolio = () => {
       </div>
 
       {/* Pagination Dots */}
-      <div className="pagination-dots" role="navigation" aria-label="Project pagination">
+      <div
+        className="pagination-dots"
+        role="navigation"
+        aria-label="Project pagination"
+      >
         {PORTFOLIO_ITEMS.map((item, index) => (
           <button
             key={item.id}
-            className={`pagination-dot ${index === currentIndex ? "active" : ""}`}
+            className={`pagination-dot ${
+              index === currentIndex ? "active" : ""
+            }`}
             onClick={() => navigateToPage(index)}
             aria-label={`Go to project ${index + 1}`}
             aria-current={index === currentIndex ? "true" : "false"}
