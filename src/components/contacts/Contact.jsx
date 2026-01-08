@@ -24,33 +24,52 @@ const Contact = () => {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
 
-  const ref = useRef()
+  const formRef = useRef(null);
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  const sendEmail = async (e) => {
+  e.preventDefault();
 
-    emailjs
-      .sendForm(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_TEMPLATE_ID, e.target, {
-        publicKey: import.meta.env.VITE_PUBLIC_KEY,
-      })
-      .then(
-        () => {
-          console.log('SUCCESS!');
-          setSuccess(true);
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-          setError(error);
-        },
-      );
-  };
+  try {
+    await emailjs.sendForm(
+      import.meta.env.VITE_SERVICE_ID,
+      import.meta.env.VITE_TEMPLATE_ID,
+      e.target,
+      import.meta.env.VITE_PUBLIC_KEY
+    );
 
-  const isInView = useInView(ref, {margin: "-200px"})
+    console.log("SUCCESS!");
+    setSuccess(true);
+    setError(false);
+    e.target.reset();
+  } catch (err) {
+    console.error("EmailJS Error:", err);
+    setError(true);
+  }
+};
+
+  //   emailjs
+  //     .sendForm(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_TEMPLATE_ID, form,
+  //     import.meta.env.VITE_PUBLIC_KEY,
+  //     )
+  //     .then(
+  //       () => {
+  //         console.log('SUCCESS!');
+  //         setSuccess(true);
+  //         setError(false);
+  //         form.reset();
+  //       }
+  //     ).catch((err) =>{
+  //       console.error("EmailJS Error:", err);
+  //       setError(true);
+  //     });
+  // };
+
+  const isInView = useInView(formRef, {margin: "-200px"})
 
   return (
-    <div className='contact' ref={ref} onSubmit={sendEmail}>
+    <div className='contact' >
       <div className="contact-section">
-        <motion.form action="#" variants={listVariant} animate={isInView ? "animate" : "initial"}>
+        <motion.form action="#" ref={formRef} onSubmit={sendEmail} variants={listVariant} animate={isInView ? "animate" : "initial"}>
           <motion.h1 variants={listVariant} className="contact-title">Contact me</motion.h1>
           <motion.div variants={listVariant} className="form-item">
             <label htmlFor="#">Name</label>
@@ -64,7 +83,7 @@ const Contact = () => {
             <label htmlFor="#">Message</label>
             <textarea name="message" id="#" rows={10} placeholder="Write your message..."></textarea>
           </motion.div>
-          <motion.button variants={listVariant} className="form-btn">Send</motion.button>
+          <motion.button variants={listVariant} className="form-btn" type="submit">Send</motion.button>
           {success && <span>Your message has been sent!</span>}
           {error && <span>Something went wrong!</span>}
         </motion.form>
