@@ -39,9 +39,9 @@
 /* Container */
 .portfolio-container {
   position: relative;
-  background: rgba(26, 26, 26, 0.8);
+  /* background: rgba(26, 26, 26, 0.8); */
   backdrop-filter: blur(20px);
-  border-radius: 24px;
+  /* border-radius: 24px; */
   border: 1px solid rgba(255, 255, 255, 0.05);
   overflow: hidden;
   min-height: 500px;
@@ -73,6 +73,7 @@
 .pImg {
   position: relative;
   overflow: hidden;
+  object-fit: contain;
   min-height: 300px;
 }
 
@@ -155,7 +156,7 @@
 .pText button {
   background: linear-gradient(135deg, #d88898, #c07080);
   color: #0a0a0a;
-  padding: 1rem 2rem;
+  padding: 0.6rem 1rem;
   border-radius: 12px;
   font-weight: 700;
   font-size: 1rem;
@@ -186,10 +187,10 @@
 /* Navigation Buttons */
 .nav-button {
   position: absolute;
-  top: 50%;
+  top: 45%;
   transform: translateY(-50%);
-  width: 48px;
-  height: 48px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
@@ -215,12 +216,16 @@
   cursor: not-allowed;
 }
 
-.nav-button-prev { left: 1rem; }
-.nav-button-next { right: 1rem; }
+.nav-button-prev { left: 0.05rem; }
+.nav-button-next { right: 0.05rem; }
 
 @media (min-width: 768px) {
-  .nav-button-prev { left: 1.5rem; }
-  .nav-button-next { right: 1.5rem; }
+  .nav-button-prev { 
+    left: 0.6rem;
+  }
+  .nav-button-next { 
+    right: 0.6rem; 
+  }
 }
 
 /* Pagination Dots */

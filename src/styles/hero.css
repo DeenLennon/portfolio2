@@ -502,7 +502,7 @@
     top: auto;
     right: auto;
     bottom: 2rem;
-    right: 2rem;
+    right: 13rem;
     position: fixed;
   }
 
@@ -512,7 +512,7 @@
   }
 
   .circleText {
-    font-size: clamp(10px, 1.5vw, 13px);
+    font-size: clamp(16px, 1.5vw, 18px);
   }
 
   .arrow svg {
@@ -543,7 +543,7 @@
 
 @media (min-width: 1024px) {
   .hero-image {
-    right: 5%;
+    right: 40%;
     left: auto;
     width: 40%;
     max-width: 600px;

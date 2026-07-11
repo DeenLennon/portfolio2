@@ -130,9 +130,9 @@ const Hero = () => {
           className="follow"
         >
           {[
-            { src: '/instagram.png', label: 'Instagram' },
-            { src: '/twitter.png', label: 'Twitter' },
-            { src: '/facebook.png', label: 'Facebook' }
+            { src: '/instagram.png', label: 'Instagram', url: import.meta.env.VITE_INSTAGRAM_URL },
+            { src: '/x4.png', label: 'Twitter', url: import.meta.env.VITE_TWITTER_URL },
+            { src: '/facebook.png', label: 'Facebook', url: import.meta.env.VITE_FACEBOOK_URL }
           ].map((social) => (
             <motion.a 
               key={social.label}
