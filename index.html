@@ -1,13 +1,73 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio-app</title>
+    <meta name="theme-color" content="#0a0a0a" />
+
+    <!-- SEO Meta Tags -->
+    <title>Deen Lennon | Full Stack Developer & DevSecOps Engineer</title>
+    <meta name="description" content="Professional portfolio of Deen Lennon - Full Stack Developer & DevSecOps Engineer specializing in React, Node.js, and secure cloud infrastructure." />
+    <meta name="keywords" content="Full Stack Developer, DevSecOps, React, Node.js, Web Development, Portfolio" />
+    <meta name="author" content="Deen Lennon" />
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Deen Lennon | Full Stack Developer" />
+    <meta property="og:description" content="Building secure, scalable, and performant web applications." />
+    <meta property="og:image" content="/og-image.jpg" />
+    <meta property="og:url" content="https://deenlennon.dev" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Deen Lennon | Full Stack Developer" />
+    <meta name="twitter:description" content="Building secure, scalable, and performant web applications." />
+    <meta name="twitter:image" content="/og-image.jpg" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <style>
+      /* Critical CSS for initial render */
+      html, body { margin: 0; padding: 0; background: #0a0a0a; }
+      #root { min-height: 100vh; }
+
+      /* Prevent FOUC */
+      .loading-screen {
+        position: fixed;
+        inset: 0;
+        background: #0a0a0a;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 99999;
+      }
+      .loading-screen h1 {
+        color: #f5f5f5;
+        font-family: 'Inter', system-ui, sans-serif;
+        font-size: 2rem;
+        font-weight: 800;
+      }
+      .loading-screen h1 span { color: #d88898; }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Fallback loading screen -->
+      <div class="loading-screen">
+        <h1>DL<span>.</span></h1>
+      </div>
+    </div>
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

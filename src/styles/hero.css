@@ -1,0 +1,674 @@
+/* ============================================
+   HERO SECTION — Mobile Layout (Your Specs)
+   ============================================ */
+
+.hero {
+  position: relative;
+  min-height: 100dvh;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  overflow: hidden;
+  background: #0a0a0a;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ============================================
+   HERO SECTIONS — Mobile: Single column
+   ============================================ */
+
+.hero-section {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  gap: 0;
+}
+
+/* LEFT SECTION: Title + Awards + Scroll Indicator */
+.hero-section.left {
+  order: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Let clicks pass through to image */
+  z-index: 5;
+}
+
+/* RIGHT SECTION: Follow + Speech + Certificate + Contact */
+.hero-section.right {
+  order: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
+}
+
+@media (min-width: 1024px) {
+  .hero-section {
+    position: relative;
+    justify-content: center;
+    padding: clamp(2rem, 5vw, 4rem);
+    gap: clamp(1.5rem, 3vw, 2.5rem);
+    pointer-events: auto;
+  }
+
+  .hero-section.left {
+    position: relative;
+    order: 1;
+    width: auto;
+    height: auto;
+  }
+
+  .hero-section.right {
+    position: relative;
+    order: 2;
+    align-items: flex-end;
+  }
+}
+
+/* ============================================
+   TITLE — Top Left Corner (Mobile)
+   ============================================ */
+
+.hero-title {
+  position: absolute;
+  top: max(12rem, 12vh);           /* Below fixed nav */
+  left: clamp(1rem, 4vw, 2rem);
+  font-size: clamp(1.4rem, 6vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #f5f5f5;
+  margin: 0;
+  pointer-events: auto;
+  z-index: 10;
+  max-width: 60%;
+}
+
+.hero-title span {
+  color: #d88898;
+  display: block;
+  margin-top: 0.25rem;
+}
+
+@media (min-width: 1024px) {
+  .hero-title {
+    position: relative;
+    top: auto;
+    left: auto;
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    max-width: none;
+  }
+}
+
+/* ============================================
+   AWARDS — Below title on mobile
+   ============================================ */
+
+.awards {
+  position: absolute;
+  top: max(16rem, 22vh);
+  left: clamp(1rem, 4vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  pointer-events: auto;
+  z-index: 10;
+  max-width: 55%;
+}
+
+.awards h2 {
+  font-size: clamp(0.8rem, 2.5vw, 1rem);
+  font-weight: 600;
+  color: #a1a1aa;
+  margin: 0;
+}
+
+.awards p {
+  font-size: clamp(0.7rem, 2vw, 0.85rem);
+  color: #82828b;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.awards-list {
+  display: flex;
+  gap: clamp(0.5rem, 2vw, 1rem);
+  flex-wrap: wrap;
+  margin-top: 0.25rem;
+}
+
+.awards-list img {
+  width: clamp(28px, 6vw, 40px);
+  height: auto;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+  filter: grayscale(100%);
+}
+
+.awards-list img:hover {
+  opacity: 1;
+  transform: translateY(-3px);
+  filter: grayscale(0%);
+}
+
+@media (min-width: 1024px) {
+  .awards {
+    position: relative;
+    top: auto;
+    left: auto;
+    max-width: 400px;
+    gap: 1rem;
+  }
+
+  .awards h2 {
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
+  }
+
+  .awards p {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+  }
+
+  .awards-list img {
+    width: clamp(40px, 8vw, 60px);
+  }
+}
+
+/* ============================================
+   SCROLL INDICATOR — Bottom Left Corner
+   ============================================ */
+
+.scroll-indicator {
+  position: absolute;
+  bottom: max(1.5rem, env(safe-area-inset-bottom));
+  left: clamp(1rem, 4vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  color: #71717a;
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  text-decoration: none;
+  z-index: 50;
+  pointer-events: auto;
+}
+
+.mouse-svg {
+  width: 16px;
+  height: 24px;
+}
+
+@media (min-width: 1024px) {
+  .scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: clamp(2rem, 5vw, 4rem);
+  }
+
+  .mouse-svg {
+    width: 24px;
+    height: 36px;
+  }
+}
+
+/* ============================================
+   FOLLOW ICONS — Vertical, Middle Right
+   ============================================ */
+
+.follow {
+  position: absolute;
+  right: clamp(0.75rem, 3vw, 1.5rem);
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  z-index: 50;
+  pointer-events: auto;
+}
+
+.follow a {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.follow a:hover,
+.follow a:active {
+  background: #d88898;
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(216, 136, 152, 0.3);
+  border-color: #d88898;
+}
+
+.follow a img {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) invert(1);
+}
+
+.follow-text-container {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .follow {
+    position: absolute;
+    right: 2rem;
+    gap: 1rem;
+  }
+
+  .follow a {
+    width: 44px;
+    height: 44px;
+  }
+
+  .follow a img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .follow-text-container {
+    display: block;
+    position: relative;
+    height: 120px;
+    width: 40px;
+  }
+
+  .follow-text {
+    position: absolute;
+    white-space: nowrap;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #52525b;
+    top: 50%;
+    left: 50%;
+    transform: rotate(-90deg) translate(-50%, -50%);
+    transform-origin: left center;
+  }
+}
+
+/* ============================================
+   SPEECH BUBBLE — On the body of the image
+   ============================================ */
+
+.speech-bubble {
+  position: absolute;
+  bottom: max(25vh, 180px);       /* Sits on upper body of image */
+  left: 45%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 50;
+  pointer-events: auto;
+}
+
+.bubble {
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 0.6rem 1rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+  max-width: min(380px, 80vw);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px 6px 0;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.1) transparent transparent;
+}
+
+.bubble span {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(0.7rem, 2vw, 0.85rem);
+  color: #05a4aa;
+  word-break: break-word;
+}
+
+.speech-bubble img {
+  width: clamp(32px, 8vw, 40px);
+  height: clamp(32px, 8vw, 40px);
+  border-radius: 50%;
+  border: 2px solid #d88898;
+  object-fit: cover;
+}
+
+@media (min-width: 1024px) {
+  .speech-bubble {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    margin-bottom: 2rem;
+    margin-right: 220px;
+  }
+
+  .bubble {
+    padding: 1rem 1.5rem;
+    border-radius: 20px;
+    max-width: 350px;
+  }
+
+  .bubble::after {
+    bottom: -8px;
+    border-width: 8px 8px 0;
+  }
+
+  .speech-bubble img {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* ============================================
+   CERTIFICATE BADGE — Below speech bubble
+   ============================================ */
+
+.certificate {
+  position: absolute;
+  bottom: max(12vh, 100px);
+  left: clamp(1rem, 4vw, 2rem);
+  /* background: rgba(26, 26, 26, 0.9); */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 0.75rem;
+  text-align: center;
+  font-size: clamp(0.65rem, 1.8vw, 0.8rem);
+  color: #a1a1aa;
+  line-height: 1.5;
+  max-width: min(180px, 45vw);
+  z-index: 50;
+  pointer-events: auto;
+}
+
+.certificate img {
+  width: clamp(30px, 8vw, 40px);
+  height: clamp(30px, 8vw, 40px);
+  margin: 0 auto 0.5rem;
+  opacity: 0.9;
+}
+
+.dev-sec {
+  color: #d88898;
+  font-weight: 700;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+@media (min-width: 1024px) {
+  .certificate {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    padding: 1.5rem;
+    font-size: 0.85rem;
+    max-width: 260px;
+    margin: 0 120px 2rem 0;
+  }
+
+  .certificate img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .dev-sec {
+    font-size: 1.1rem;
+  }
+}
+
+/* ============================================
+   CONTACT BUTTON (Hire Me) — Top Right Corner
+   ============================================ */
+
+.contact-link {
+  position: absolute;
+  top: max(5rem, 12vh);           /* Below nav */
+  right: clamp(0.75rem, 3vw, 1.5rem);
+  z-index: 100;
+  transition: transform 0.3s ease;
+  pointer-events: auto;
+}
+
+.contact-link:hover {
+  transform: scale(1.05);
+}
+
+.contact-btn {
+  position: relative;
+  width: clamp(60px, 14vw, 100px);
+  height: clamp(60px, 14vw, 100px);
+}
+
+.circle-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.circleText {
+  font-size: clamp(14px, 1.8vw, 16px);
+  font-weight: 700;
+  fill: #0a0a0a;
+  letter-spacing: 0.1em;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.arrow svg {
+  width: clamp(18px, 4vw, 32px);
+  height: clamp(18px, 4vw, 32px);
+}
+
+@media (min-width: 1024px) {
+  .contact-link {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: 2rem;
+    right: 2rem;
+    position: fixed;
+  }
+
+  .contact-btn {
+    width: clamp(100px, 15vw, 140px);
+    height: clamp(100px, 15vw, 140px);
+  }
+
+  .circleText {
+    font-size: clamp(10px, 1.5vw, 13px);
+  }
+
+  .arrow svg {
+    width: clamp(24px, 5vw, 50px);
+    height: clamp(24px, 5vw, 50px);
+  }
+}
+
+/* ============================================
+   HERO IMAGE — Full background on mobile
+   ============================================ */
+
+.hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+@media (min-width: 1024px) {
+  .hero-image {
+    right: 5%;
+    left: auto;
+    width: 40%;
+    max-width: 600px;
+    z-index: 10;
+  }
+
+  .hero-image img {
+    height: 100vh;
+    object-fit: contain;
+    object-position: bottom right;
+  }
+}
+
+/* ============================================
+   BACKGROUND & 3D CANVAS
+   ============================================ */
+
+.bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+@media (min-width: 1024px) {
+  .bg {
+    opacity: 0.5;
+  }
+}
+
+.canvas-container {
+  width: 100%;
+  height: 100%;
+  min-height: 100dvh;
+}
+
+@media (min-width: 768px) {
+  .canvas-container {
+    min-height: 500px;
+  }
+}
+
+/* ============================================
+   LANDSCAPE MOBILE ADJUSTMENTS
+   ============================================ */
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero-title {
+    top: 4rem;
+    font-size: 1.2rem;
+    max-width: 50%;
+  }
+
+  .awards {
+    top: 7rem;
+    max-width: 45%;
+  }
+
+  .awards h2 {
+    font-size: 0.75rem;
+  }
+
+  .awards p {
+    font-size: 0.65rem;
+  }
+
+  .speech-bubble {
+    bottom: 20vh;
+  }
+
+  .bubble {
+    padding: 0.4rem 0.75rem;
+  }
+
+  .bubble span {
+    font-size: 0.65rem;
+  }
+
+  .certificate {
+    bottom: 8vh;
+    padding: 0.5rem;
+    max-width: 140px;
+  }
+
+  .certificate img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .contact-link {
+    top: 4rem;
+  }
+
+  .contact-btn {
+    width: 50px;
+    height: 50px;
+  }
+
+  .follow a {
+    width: 32px;
+    height: 32px;
+  }
+
+  .follow a img {
+    width: 14px;
+    height: 14px;
+  }
+
+  .scroll-indicator {
+    bottom: 0.5rem;
+    left: 1rem;
+  }
+}
+
+/* ============================================
+   REDUCED MOTION
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .hero *,
+  .hero *::before,
+  .hero *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
