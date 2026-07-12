@@ -4,26 +4,27 @@ import Counter from "./Counter";
 import "../styles/skills.css";
 
 const STATS = [
-  { from: 0, to: 50, text: "Projects Completed", suffix: "+" },
-  { from: 0, to: 30, text: "Happy Clients", suffix: "+" },
-  { from: 0, to: 5, text: "Years Experience", suffix: "" },
+  { from: 0, to: 15, text: "Projects Completed", suffix: "+" },
+  { from: 0, to: 12, text: "Happy Clients", suffix: "+" },
+  { from: 0, to: 5, text: "Years Experience", suffix: "+" },
   { from: 0, to: 99, text: "Success Rate", suffix: "%" },
 ];
 
 const SKILLS = [
-  { name: "React / Next.js", level: 95 },
-  { name: "Node.js / Express", level: 90 },
-  { name: "TypeScript", level: 88 },
-  { name: "Python / Django", level: 85 },
-  { name: "DevOps / Docker", level: 82 },
-  { name: "AWS / Cloud", level: 80 },
-  { name: "MongoDB / PostgreSQL", level: 85 },
-  { name: "UI/UX Design", level: 75 },
+  { name: "React / Next.js", level: 80 },
+  { name: "Node.js / Express", level: 75 },
+  { name: "Cybersecurity / Ethical Hacking", level: 65 },
+  { name: "TypeScript", level: 30 },
+  { name: "Python / Django", level: 65 },
+  { name: "DevOps / Docker", level: 20 },
+  { name: "AWS / Cloud", level: 10 },
+  { name: "MongoDB / PostgreSQL", level: 50 },
+  { name: "Digital Electronics", level: 75 },
 ];
 
 const TOOLS = [
-  "VS Code", "Git", "Figma", "Docker", "Kubernetes", 
-  "Jenkins", "AWS", "Vercel", "Linux", "Postman"
+  "VS Code", "Git", "Arduino", "Docker", "Kubernetes", 
+  "Node", "AWS", "Wireshark", "Linux", "Postman", "Parrot",
 ];
 
 const Skills = () => {
@@ -58,8 +59,7 @@ const Skills = () => {
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <span className="skills__subtitle">My Expertise</span>
-          <h2 className="skills__title">Technical Skills</h2>
+          <h2 className="skills__title">My Expertise</h2>
           <p className="skills__description">
             Proficient in modern web technologies with a focus on performance, 
             security, and scalable architecture.
@@ -114,13 +114,13 @@ const Skills = () => {
           </div>
 
           <div className="skills__experience">
-            <h3>Experience Timeline</h3>
+            <h3>Experience</h3>
             <div className="timeline">
               {[
-                { year: "2024 - Present", role: "Senior Full Stack Developer", company: "Tech Solutions Inc." },
+                { year: "2025 - Present", role: "Digital Technologies Instructor", company: "AIS Intl. Schools" },
                 { year: "2022 - 2024", role: "Full Stack Developer", company: "Digital Agency" },
                 { year: "2021 - 2022", role: "Junior Developer", company: "Startup Hub" },
-                { year: "2020 - 2021", role: "Freelance Developer", company: "Self-Employed" },
+                { year: "2020 - 2021", role: "Digital Electronics", company: "Self-Employed" },
               ].map((item, index) => (
                 <motion.div
                   key={index}

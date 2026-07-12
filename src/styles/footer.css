@@ -107,6 +107,22 @@
   margin-bottom: 1.25rem;
 }
 
+.footer_nav_head{
+  padding-left: 30px;
+}
+
+.footer_nav{
+  padding-left: 30px;
+}
+
+.footer_service_head{
+  margin-right: 30px;
+}
+
+.footer_service{
+  margin-right: 30px;
+}
+
 .footer__link-group ul {
   list-style: none;
   display: flex;

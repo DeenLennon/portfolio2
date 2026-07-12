@@ -57,8 +57,8 @@ const Footer = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
           >
             <div className="footer__link-group">
-              <h4>Navigation</h4>
-              <ul>
+              <h4 className="footer_nav_head">Navigation</h4>
+              <ul className="footer_nav">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#services">Services</a></li>
@@ -68,8 +68,8 @@ const Footer = () => {
             </div>
 
             <div className="footer__link-group">
-              <h4>Services</h4>
-              <ul>
+              <h4 className="footer_service_head">Services</h4>
+              <ul className="footer_service">
                 <li><a href="#services">Web Development</a></li>
                 <li><a href="#services">Mobile Apps</a></li>
                 <li><a href="#services">DevSecOps</a></li>

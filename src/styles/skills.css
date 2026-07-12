@@ -63,16 +63,6 @@
 }
 
 /* Left Column */
-.skills__subtitle {
-  display: inline-block;
-  color: #d88898;
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  margin-bottom: 1rem;
-}
-
 .skills__title {
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 800;

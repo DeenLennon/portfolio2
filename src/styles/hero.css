@@ -1,7 +1,3 @@
-/* ============================================
-   HERO SECTION — Mobile Layout (Your Specs)
-   ============================================ */
-
 .hero {
   position: relative;
   min-height: 100dvh;
@@ -40,7 +36,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none; /* Let clicks pass through to image */
+  pointer-events: none;
+  /* Let clicks pass through to image */
   z-index: 5;
 }
 
@@ -85,7 +82,8 @@
 
 .hero-title {
   position: absolute;
-  top: max(12rem, 12vh);           /* Below fixed nav */
+  top: max(12rem, 12vh);
+  /* Below fixed nav */
   left: clamp(1rem, 4vw, 2rem);
   font-size: clamp(1.4rem, 6vw, 2.5rem);
   font-weight: 800;
@@ -131,14 +129,14 @@
 }
 
 .awards h2 {
-  font-size: clamp(0.8rem, 2.5vw, 1rem);
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   font-weight: 600;
   color: #a1a1aa;
   margin: 0;
 }
 
 .awards p {
-  font-size: clamp(0.7rem, 2vw, 0.85rem);
+  font-size: clamp(0.8rem, 2vw, 1rem);
   color: #82828b;
   line-height: 1.4;
   margin: 0;
@@ -192,7 +190,7 @@
    ============================================ */
 
 .scroll-indicator {
-  position: absolute;
+  position: fixed;
   bottom: max(1.5rem, env(safe-area-inset-bottom));
   left: clamp(1rem, 4vw, 2rem);
   display: flex;
@@ -271,8 +269,24 @@
 }
 
 .follow-text-container {
-  display: none;
+  display: block;
+  position: relative;
+  height: 120px;
+  width: 40px;
 }
+
+.follow-text {
+    position: absolute;
+    white-space: nowrap;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #a3a3b0;
+    top: 30%;
+    left: 80%;
+    transform: rotate(-90deg) translate(-50%, -50%);
+    transform-origin: left center;
+  }
 
 @media (min-width: 1024px) {
   .follow {
@@ -318,8 +332,9 @@
 
 .speech-bubble {
   position: absolute;
-  bottom: max(25vh, 180px);       /* Sits on upper body of image */
-  left: 45%;
+  bottom: max(30vh, 180px);
+  /* Sits on upper body of image */
+  left: 16%;
   transform: translateX(-50%);
   display: inline-flex;
   flex-direction: column;
@@ -416,9 +431,11 @@
 }
 
 .certificate img {
-  width: clamp(30px, 8vw, 40px);
-  height: clamp(30px, 8vw, 40px);
-  margin: 0 auto 0.5rem;
+  width: clamp(50px, 8vw, 40px);
+  height: clamp(50px, 8vw, 40px);
+  position: absolute;
+  top: -35px;
+  left: 50px;
   opacity: 0.9;
 }
 
@@ -455,7 +472,8 @@
 
 .contact-link {
   position: absolute;
-  top: max(5rem, 12vh);           /* Below nav */
+  top: max(5rem, 12vh);
+  /* Below nav */
   right: clamp(0.75rem, 3vw, 1.5rem);
   z-index: 100;
   transition: transform 0.3s ease;
@@ -468,8 +486,8 @@
 
 .contact-btn {
   position: relative;
-  width: clamp(60px, 14vw, 100px);
-  height: clamp(60px, 14vw, 100px);
+  width: clamp(70px, 14vw, 100px);
+  height: clamp(70px, 14vw, 100px);
 }
 
 .circle-svg {
@@ -478,7 +496,7 @@
 }
 
 .circleText {
-  font-size: clamp(14px, 1.8vw, 16px);
+  font-size: clamp(20px, 3vw, 22px);
   font-weight: 700;
   fill: #0a0a0a;
   letter-spacing: 0.1em;
@@ -512,7 +530,7 @@
   }
 
   .circleText {
-    font-size: clamp(16px, 1.5vw, 18px);
+    font-size: clamp(18px, 1.5vw, 20px);
   }
 
   .arrow svg {
@@ -664,6 +682,7 @@
    ============================================ */
 
 @media (prefers-reduced-motion: reduce) {
+
   .hero *,
   .hero *::before,
   .hero *::after {

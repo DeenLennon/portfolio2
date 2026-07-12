@@ -41,27 +41,70 @@ const SERVICES = [
   {
     id: 4,
     icon: (
-      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <circle cx="12" cy="12" r="3" />
-        <path d="M12 1v6m0 6v6m4.22-10.22l4.24-4.24M6.34 6.34L2.1 2.1m17.8 17.8l-4.24-4.24M6.34 17.66l-4.24 4.24M23 12h-6m-6 0H1m20.24-4.24l-4.24 4.24M6.34 6.34l-4.24-4.24" />
+      <svg
+        width="40"
+        height="40"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        {/* Chip body */}
+        <rect x="7" y="7" width="10" height="10" rx="1.5" />
+
+        {/* Inner core */}
+        <rect x="10" y="10" width="4" height="4" />
+
+        {/* Top pins */}
+        <path d="M9 7V4M12 7V4M15 7V4" />
+
+        {/* Bottom pins */}
+        <path d="M9 20V17M12 20V17M15 20V17" />
+
+        {/* Left pins */}
+        <path d="M4 9H7M4 12H7M4 15H7" />
+
+        {/* Right pins */}
+        <path d="M17 9H20M17 12H20M17 15H20" />
       </svg>
     ),
-    title: "UI/UX Design",
-    description: "User-centered design that combines aesthetics with functionality. Wireframes to high-fidelity prototypes.",
-    features: ["User Research", "Wireframing", "Prototyping", "Design Systems"],
+    title: "Digital Electronics, Robotics & Device Repairs",
+    description: "Professional solutions in digital electronics, robotics, and expert laptop and smartphone repairs. Delivering reliable diagnostics, maintenance, and innovative technology solutions.",
+    features: ["Digital Electronics", "Robotics", "Laptop Repairs", "Smartphone Repairs"]
   },
   {
     id: 5,
     icon: (
-      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-        <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
-        <line x1="12" y1="22.08" x2="12" y2="12" />
+      <svg
+        width="40"
+        height="40"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        {/* Shield */}
+        <path d="M12 2L5 5v6c0 5 3.5 9 7 11 3.5-2 7-6 7-11V5l-7-3z" />
+
+        {/* Lock Body */}
+        <rect x="9" y="11" width="6" height="5" rx="1" />
+
+        {/* Lock Shackle */}
+        <path d="M10 11V9a2 2 0 1 1 4 0v2" />
+
+        {/* Keyhole */}
+        <circle cx="12" cy="13.5" r="0.6" />
+        <path d="M12 14.1v1.2" />
       </svg>
     ),
-    title: "Cloud Solutions",
-    description: "Scalable cloud architecture and migration services. Optimize your infrastructure for performance and cost.",
-    features: ["AWS / Azure / GCP", "Serverless", "Microservices", "Monitoring"],
+    title: "Cybersecurity",
+    description: "Building hands-on experience in cybersecurity through ethical hacking techniques, vulnerability analysis, and implementing security best practices to improve system resilience.",
+    features: ["Ethical Hacking", "Basic Penetration Testing", "Vulnerability Scanning", "Security Awareness"
+    ]
   },
   {
     id: 6,
@@ -109,10 +152,9 @@ const Services = () => {
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6 }}
       >
-        <span className="services__subtitle">What I Do</span>
-        <h2 className="services__title">Services I Offer</h2>
+        <h2 className="services__title">My Services</h2>
         <p className="services__description">
-          Comprehensive development solutions tailored to your needs, from concept to deployment.
+          Comprehensive development solutions engineered for your needs, from concept to deployment.
         </p>
       </motion.div>
 
