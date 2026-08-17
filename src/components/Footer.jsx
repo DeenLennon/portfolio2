@@ -115,8 +115,8 @@ const Footer = () => {
         <div className="footer__bottom">
           <p>&copy; {currentYear} Deen Lennon. All rights reserved.</p>
           <div className="footer__bottom-links">
-            <a href="/">Privacy Policy</a>
-            <a href="/">Terms of Service</a>
+            <a href="/privacy-policy">Privacy Policy</a>
+            <a href="/terms-of-service">Terms of Service</a>
           </div>
         </div>
       </div>

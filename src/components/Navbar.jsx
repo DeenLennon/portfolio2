@@ -8,6 +8,8 @@ const NAV_LINKS = [
   { label: "Services", href: "#services" },
   { label: "Skills", href: "#skills" },
   { label: "Contact", href: "#contact" },
+  { label: "Privacy", href: "/privacy-policy" },
+  { label: "Terms of Service", href: "/terms-of-service" },
 ];
 
 const Navbar = () => {
@@ -37,6 +39,12 @@ const Navbar = () => {
   }, []);
 
   const handleNavClick = (e, href) => {
+
+    // Handle normal page navigation
+    if (!href.startsWith("#")) {
+      return;
+    }
+
     e.preventDefault();
     setIsMobileMenuOpen(false);
     const element = document.querySelector(href);

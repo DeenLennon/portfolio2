@@ -4,6 +4,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import LoadingBar from "./LoadingBar";
 import Navbar from "./Navbar";
 import ProjectDetail from "./ProjectDetails";
+import PrivacyPolicy from "./PrivacyPolicy";
+import TermsOfService from "./TermsOfService";
 
 const Hero = lazy(() => import("./Hero"));
 const Portfolio = lazy(() => import("./Portfolio"));
@@ -51,11 +53,37 @@ const HomePage = () => (
 );
 
 // Scroll to top on route change
+// const ScrollToTop = () => {
+//   const { pathname } = useLocation();
+//   useEffect(() => {
+//     window.scrollTo(0, 0);
+//   }, [pathname]);
+//   return null;
+// };
+
 const ScrollToTop = () => {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
+
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    if (hash) {
+      const element = document.querySelector(hash);
+
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }, 100);
+      }
+    } else {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+  }, [pathname, hash]);
+
   return null;
 };
 
@@ -120,6 +148,8 @@ function App() {
                   }
                 />
                 <Route path="/projects/:projectId" element={<ProjectDetail />} />
+                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="/terms-of-service" element={<TermsOfService />} />
               </Routes>
             </motion.div>
           )}

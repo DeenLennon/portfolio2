@@ -258,22 +258,6 @@ const Portfolio = () => {
         ))}
       </div>
 
-      {/* <div className="project-counter" aria-live="polite">
-        <span className="current-number">{String(currentIndex + 1).padStart(2, '0')}</span>
-        <span className="separator">/</span>
-        <span className="total-number">{String(PORTFOLIO_ITEMS.length).padStart(2, '0')}</span>
-      </div> */}
-
-      {/* <div className="progress-bar" aria-hidden="true">
-        <motion.div
-          className="progress-fill"
-          initial={{ width: "0%" }}
-          animate={{
-            width: `${((currentIndex + 1) / PORTFOLIO_ITEMS.length) * 100}%`,
-          }}
-          transition={{ duration: 0.4, ease: "easeInOut" }}
-        />
-      </div> */}
     </section>
   );
 };

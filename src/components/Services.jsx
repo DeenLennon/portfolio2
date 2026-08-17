@@ -24,7 +24,7 @@ const SERVICES = [
       </svg>
     ),
     title: "Mobile Development",
-    description: "Native and cross-platform mobile applications that deliver exceptional user experiences on iOS and Android.",
+    description: "Native and cross-platform mobile applications that deliver exceptional user experiences on iOS and Android. In view",
     features: ["React Native", "Flutter", "iOS / Android", "App Store Deployment"],
   },
   {
@@ -36,7 +36,7 @@ const SERVICES = [
     ),
     title: "DevSecOps",
     description: "Secure development practices integrated into your pipeline. CI/CD automation with security-first approach.",
-    features: ["CI/CD Pipelines", "Security Audits", "Docker / K8s", "Cloud Infrastructure"],
+    features: ["CI/CD Pipelines", "Security Audits", "Docker / K8s. In view", "Cloud Infrastructure. In view"],
   },
   {
     id: 4,
