@@ -41,10 +41,6 @@ const TermsOfService = () => {
             <section className="legal-hero">
                 <div className="legal-container">
 
-                    <span className="legal-badge">
-                        LEGAL
-                    </span>
-
                     <h1>Terms of Service</h1>
 
                     <p className="legal-intro">
