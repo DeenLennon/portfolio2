@@ -4,10 +4,6 @@
    MOBILE FIRST
 ========================================= */
 
-/* =========================================
-   CONTAINER
-========================================= */
-
 .legal-container {
   width: min(100% - 2rem, 900px);
   margin-inline: auto;
@@ -49,7 +45,7 @@
 
 .legal-date {
   margin-top: 1rem;
-  font-size: 0.85rem;
+  font-size: 0.65rem;
   color: #777;
 }
 
@@ -64,7 +60,7 @@
 }
 
 .legal-content {
-  font-size: 1rem;
+  font-size: 0.85rem;
   line-height: 1.2;
 }
 
@@ -74,7 +70,7 @@
 
 .legal-content h2 {
   margin: 0 0 1rem;
-  font-size: clamp(1.45rem, 4vw, 2rem);
+  font-size: clamp(1rem, 4vw, 2rem);
   line-height: 1.25;
   letter-spacing: -0.02em;
 }
@@ -82,7 +78,7 @@
 .legal-content h3 {
   margin: 2rem 0 0.75rem;
 
-  font-size: clamp(1.1rem, 3vw, 1.3rem);
+  font-size: clamp(1rem, 3vw, 1.3rem);
 }
 
 .legal-content p {

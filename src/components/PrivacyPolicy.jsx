@@ -119,7 +119,7 @@ const PrivacyPolicy = () => {
                             <h2>Digital Electronics Information</h2>
 
                             <p>
-                                If you contact me regarding electronics or
+                                If you contact me regarding electronics, robotics or
                                 embedded-system projects, you may provide information
                                 such as:
                             </p>
@@ -148,14 +148,10 @@ const PrivacyPolicy = () => {
 
                             <p>
                                 This Privacy Policy may be updated periodically to
-                                reflect changes to the website, technology, services,
+                                reflect changes to the website, technologies, services,
                                 business practices, or applicable legal requirements.
                             </p>
 
-                            <p>
-                                The "Last Updated" date at the top of this page will
-                                be updated when changes are made.
-                            </p>
                         </section>
 
                     </article>
