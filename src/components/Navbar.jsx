@@ -20,7 +20,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
-
+project
       const sections = NAV_LINKS.map(link => link.href.replace("#", ""));
       for (const section of sections.reverse()) {
         const element = document.getElementById(section);
