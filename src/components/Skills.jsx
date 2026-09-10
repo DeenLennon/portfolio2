@@ -11,14 +11,14 @@ const STATS = [
 ];
 
 const SKILLS = [
-  { name: "React / Next.js", level: 80 },
-  { name: "Node.js / Express", level: 75 },
-  { name: "Cybersecurity / Ethical Hacking", level: 65 },
-  { name: "TypeScript", level: 30 },
-  { name: "Python / Django", level: 65 },
-  { name: "DevOps / Docker", level: 20 },
-  { name: "AWS / Cloud", level: 10 },
-  { name: "MongoDB / PostgreSQL", level: 50 },
+  { name: "React / Next.js", level: 95 },
+  { name: "Node.js / Express", level: 97 },
+  { name: "Cybersecurity / Ethical Hacking", level: 86 },
+  { name: "TypeScript", level: 70 },
+  { name: "Python / Django", level: 75 },
+  { name: "DevOps / Docker", level: 70 },
+  { name: "AWS / Cloud", level: 60 },
+  { name: "MongoDB / PostgreSQL", level: 60 },
   { name: "Digital Electronics", level: 75 },
 ];
 
